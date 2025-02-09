@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Imperial+Script&family=Lugrasimo&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap');
+
 :root {
     --marrom: #4F1905;
     --dourado: #C18A14;
@@ -5,10 +7,9 @@
     --vinho: #22080D;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Imperial+Script&family=Lugrasimo&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap');
-
 body {
     font-family: 'Newsreader', sans-serif;
+    margin: auto;
 }
 
 header {
@@ -31,9 +32,29 @@ header {
     text-decoration: none;
 }
 
-footer {
-    background-color: var(--vinho);
+.banner {
+    background-color: var(--marrom);
     color: white;
+    display: flex;
+}
+
+.banner__content {
+    align-content: center;
+}
+
+.banner__img {
+    width: 50%;
+    height: auto;
+}
+
+.banner__title {
+    font-family: 'Lugrasimo', sans-serif;
+}
+
+.banner__btn {
+    text-decoration: none;
+    color: var(--vinho);
+    background-color: var(--dourado);
 }
 
 .main__carrossel {
@@ -41,7 +62,12 @@ footer {
     overflow-x: scroll;
 }
 
-.main__carrossel img {
-    width: 25%;
+.main__carrossel--img {
+    width: 300px;
     height: auto;
+}
+
+footer {
+    background-color: var(--vinho);
+    color: white;
 }
