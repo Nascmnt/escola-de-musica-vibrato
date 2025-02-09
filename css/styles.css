@@ -4,3 +4,44 @@
     --cinza: #bdbcaf;
     --vinho: #22080D;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Imperial+Script&family=Lugrasimo&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap');
+
+body {
+    font-family: 'Newsreader', sans-serif;
+}
+
+header {
+    background-color: var(--vinho);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__name {
+    font-family: 'Lugrasimo', serif;
+}
+
+.nav__bar--item {
+    display: inline-block;
+}
+
+.nav__bar--item a {
+    color: white;
+    text-decoration: none;
+}
+
+footer {
+    background-color: var(--vinho);
+    color: white;
+}
+
+.main__carrossel {
+    display: flex;
+    overflow-x: scroll;
+}
+
+.main__carrossel img {
+    width: 25%;
+    height: auto;
+}
