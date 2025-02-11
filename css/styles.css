@@ -71,3 +71,107 @@ footer {
     background-color: var(--vinho);
     color: white;
 }
+
+/*/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Paleta de cores */
+:root {
+    --marrom-escuro: #5D4037;
+    --marrom-claro: #D7CCC8;
+    --dourado: #FFC107;
+    --vinho: #8E24AA;
+    --branco: #FFFFFF;
+}
+
+/* Estilização geral */
+body {
+    background-color: var(--marrom-claro);
+    color: var(--marrom-escuro);
+    text-align: center;
+}
+
+/* Cabeçalho fixo */
+header {
+    background-color: var(--marrom-escuro);
+    color: var(--branco);
+    padding: 15px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+header h1 {
+    font-size: 24px;
+    margin-left: 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin-right: 20px;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: var(--branco);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: var(--dourado);
+    color: var(--marrom-escuro);
+    border-radius: 5px;
+}
+
+/* Seção principal */
+main {
+    padding: 80px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Botões interativos */
+button {
+    background-color: var(--vinho);
+    color: var(--branco);
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: var(--dourado);
+    color: var(--marrom-escuro);
+}
+
+/* Rodapé */
+footer {
+    background-color: var(--marrom-escuro);
+    color: var(--branco);
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}/*
