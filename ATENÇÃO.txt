@@ -1,0 +1,13 @@
+- Todas as fontes, cores e degradês já estão escritos no :root. Checar qual a combinação certa de cores no projeto do Figma e só aplicar a var(--) na propriedade.
+
+- Para colocar o degradê no fundo de uma div, se utiliza a propriedade background-image ao invés de background-color.
+Ex.: background-image: var(--background_site);
+
+- Para colocar o degradê em um texto, é só copiar as seguinte propriedades (e mudar a var para a cor certa):
+
+background: var(--);
+-webkit-background-clip: text;
+background-clip: text;
+color: transparent;
+
+- >SEMPRE< dar git pull antes de começar a mexer nos arquivos, para garantir que não iremos sobreescrever os códigos que outra pessoa fez.

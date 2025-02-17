@@ -11,26 +11,32 @@
 
 <body>
     <header>
-        <h1 class="header__name">Vibrato</h1> <!--[PLACEHOLDER] Substituir pela logo-->
-        <!-- <img src="" alt="" class="logo">  Adicionar imagem da logo -->
-        <nav class="nav__bar">
-            <ul nav__bar--list>
-                <li class="nav__bar--item"><a href="index.html">Home</a></li>
-                <li class="nav__bar--item"><a href="#">Quem somos</a></li>
-                <li class="nav__bar--item"><a href="#">Planos</a></li>
-                <li class="nav__bar--item"><a href="/html/login.html">Login</a></li>
+        <h1 class="header__name">Vibrato</h1>
+        <nav class="navbar">
+            <ul navbar__list>
+                <li class="navbar__item"><a href="index.html">Home</a></li>
+                <li class="navbar__item"><a href="#">Quem somos</a></li>
+                
+                <li class="navbar__item dropdown">
+                    <a href="#">Blog</a>
+                    <ul class="dropdown__menu">
+                        <li><a href="#">A escola</a></li>
+                        <li><a href="#">Nossos cursos</a></li>
+                        <li><a href="#">Professores e horários</a></li>
+                    </ul>
+                </li>
+                <li class="navbar__item"><a href="#">Fórum</a></li>
             </ul>
         </nav>
     </header>
 
     <div class="color__container">
-        <div class="banner">
-            <img src="/imagens/guitarra_homem_sem_rosto.jpg" alt="" class="banner__img">
-            <!-- [PLACEHOLDER] Substituir por imagem do banner -->
-            <div class="banner__content">
-                <h1 class="banner__title">Vibrato</h1>
-                <h2 class="banner__subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae ea eius porro suscipit fugiat quam corrupti iste ab laudantium tempore magni modi labore ducimus minus culpa.</h2>
-                <a href="#" class="banner__btn">Estude conosco!</a>
+        <div class="herobanner">
+            <img src="imagens/imgs-index/violino.png" alt="Imagem cortada ao meio de um violino marrom" class="herobanner__img">
+            <div class="herobanner__content">
+                <h2 class="herobanner__title">A música ao alcance de todos</h2>
+                <p class="herobanner__text">A música é mais que uma arte: é uma ferramenta de mudança. Na Vibrato, democratizamos o acesso ao ensino musical, criando oportunidades para todos.</p>
+                <a href="#" class="herobanner__btn">Estude com a gente</a>
             </div>
         </div>
     </div>

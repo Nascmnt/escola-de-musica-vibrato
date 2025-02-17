@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Lugrasimo&family=Mate+SC&display=swap');
+
+:root {
+    --fonte_curva: 'Lugrasimo';
+    --fonte_reta: 'Mate SC';
+
+    /* CORES */
+    --vinho: #22080D;
+    --marrom: #4F1905;
+    --dourado: #C18A14;
+    --amarelo_escuro: #BF6A02;
+    --laranja: #B5390B;
+    --bege: #BFA362;
+    --cinza: #bdbcaf;
+    --branco: #E7D8CF;
+
+    /* DEGRADÊS */
+    --background_site: linear-gradient(180deg, rgba(193, 138, 20, 1) 0%, rgba(79, 25, 5, 1) 100%);
+    --vinho-marrom: linear-gradient(90deg, rgba(34, 8, 13, 1) 0%, rgba(79, 25, 5, 1) 100%);
+    --vinho-laranja: linear-gradient(90deg, rgba(34, 8, 13, 1) 0%, rgba(181, 57, 11, 1) 100%);
+    --marrom-laranja: linear-gradient(90deg, rgba(79, 25, 5, 1) 0%, rgba(181, 57, 11, 1) 50%);
+
+    --branco-dourado: linear-gradient(180deg, rgba(231, 216, 207, 1) 0%, rgba(193, 138, 20, 1) 100%);
+    --collapsible-div: linear-gradient(90deg, rgba(191, 106, 2, 1) 0%, rgba(231, 216, 207, 1) 100%);
+
+    /* DEGRADÊS BOTÕES/TEXTO */
+    --laranja-marrom: linear-gradient(90deg, rgba(181, 57, 11, 1) 0%, rgba(79, 25, 5, 1) 100%);
+
+    --dourado-branco: linear-gradient(90deg, rgba(193, 138, 20, 1) 0%, rgba(231, 216, 207, 1) 100%);
+    --botao_dourado: linear-gradient(90deg, rgba(193, 138, 20, 1) 0%, rgba(191, 163, 98, 1) 50%, rgba(193, 138, 20, 1) 100%);
+
+    /* DEGRADÊS NAV BAR */
+    --botao_nav: linear-gradient(180deg, rgba(34, 8, 13, 1) 0%, rgba(181, 57, 11, 1) 100%);
+    --botao_nav-ativo: linear-gradient(180deg, rgba(191, 106, 2, 1) 0%, rgba(231, 216, 207, 1) 100%);
+    --botao_nav-hover-menu: linear-gradient(180deg, , rgba(231, 216, 207, 1) 0%, rgba(191, 106, 2, 1) 100%);
+    --botao_nav-hover-option: linear-gradient(90deg, rgba(181, 57, 11, 1) 0%, rgba(191, 106, 2, 1) 100%);
+}
+
+/* CSS GERAL */
+html {
+    font-size: 62,5%;
+}
+
+body {
+    font-family: 'Mate SC', sans-serif;
+    margin: auto;
+    background-image: var(--background_site);
+}
+
+/* HEADER */
+header {
+    background-color: var(--vinho);
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__name {
+    font-family: 'Lugrasimo', serif;
+    font-size: 3rem;
+    background: var(--dourado-branco);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* NAVBAR */
+.navbar__item {
+    display: inline-block;
+}
+
+.navbar__item a {
+    font-size: 1.2rem;
+    color: var(--bege);
+    text-decoration: none;
+    background-image: var(--botao_nav);
+    padding: 10px 15px;
+    margin: 0 5px;
+    border-radius: 60px;
+}
+
+.navbar__item a:hover {
+    background-image: var(--botao_nav-ativo);
+    color: var(--vinho);
+}
+
+/* MENU DROPDOWN DO "QUEM SOMOS" */
+.dropdown__menu{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-image: var(--botao_nav-hover-menu);
+    min-width: 150px;
+    overflow: hidden;
+}
+
+.navbar__item.dropdown {
+    position: relative;
+}
+
+.dropdown__menu li a {
+    display: block;
+    padding: 10px 15px;
+    color: var(--vinho);
+}
+
+.dropdown__menu li a:hover {
+    background-image: var(--botao_nav-hover-menu);
+    color: var(--vinho);
+}
+
+.navbar__item.dropdown:hover .dropdown__menu {
+    display: block;
+}
+
+/* HERO BANNER */
+.herobanner {
+    background-color: var(--marrom);
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 100px;
+}
+
+.herobanner__content {
+    text-align: center;
+    margin: 0 30px;
+}
+
+.herobanner__img {
+    height: 30%;
+    width: auto;
+}
+
+.herobanner__title {
+    font-family: 'Lugrasimo', sans-serif;
+    color: var(--dourado);
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.herobanner__text {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.herobanner__btn {
+    padding: 15px 35px;
+    border-radius: 60px;
+    text-decoration: none;
+    color: var(--marrom);
+    font-size: 1.75rem;
+    background-image: var(--botao_dourado);
+    /* display: inline-block; */
+}
+
+/* CARROSSEL */
+.main__carrossel {
+    display: flex;
+    overflow-x: scroll;
+}
+
+.main__carrossel--img {
+    width: 300px;
+    height: auto;
+}
+
+/* FOOTER */
+footer {
+    background-color: var(--vinho);
+    color: white;
+}
