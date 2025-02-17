@@ -10,4 +10,14 @@ background: var(--);
 background-clip: text;
 color: transparent;
 
+- É necessário apenas copiar o html do header/footer e colar no inicio/final de cada página. Não precisa reescrever tudo.
+
+- Lembrar sempre de colocar o reset.css dentro do head de TODAS as páginas, antes de colocar o arquivo de css que vocês vão usar:
+
+<link rel="stylesheet" href="css/reset.css">
+
+- Lembrar sempre der importar o estilo principal no inicio de cada arquivo de css, para poder usar as fontes, variáveis e os estilos do header/footer. É só copiar esse código e colar no topo da página:
+
+@import url(/css/styles-principal.css);
+
 - >SEMPRE< dar git pull antes de começar a mexer nos arquivos, para garantir que não iremos sobreescrever os códigos que outra pessoa fez.
