@@ -38,7 +38,7 @@
 
 /* CSS GERAL */
 html {
-    font-size: 62,5%;
+    font-size: 62, 5%;
 }
 
 body {
@@ -86,7 +86,7 @@ header {
 }
 
 /* MENU DROPDOWN DO "QUEM SOMOS" */
-.dropdown__menu{
+.dropdown__menu {
     display: none;
     position: absolute;
     top: 100%;
@@ -136,7 +136,7 @@ header {
 }
 
 .herobanner__title {
-    font-family: 'Lugrasimo', sans-serif;
+    font-family: var(--fonte_curva), sans-serif;
     color: var(--dourado);
     font-size: 3rem;
     margin-bottom: 10px;
@@ -157,6 +157,46 @@ header {
     /* display: inline-block; */
 }
 
+/* SOBRE NÓS */
+.about {
+    background-image: var(--branco-dourado);
+    display: flex;
+    margin: 50px 0;
+}
+
+.about__title {
+    font-size: 1.5rem;
+    background: var(--laranja-marrom);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.about__img {
+    width: 40%;
+    height: auto;
+}
+/* NOSSOS CURSOS */
+.nossoscursos__banner {
+    background-image: var(--vinho-marrom), url(/imagens/imgs-index/music-306157_1920\ 1.png);
+    text-align: center;
+    color: var(--bege);
+}
+
+.nossoscursos__title {
+    font-family: var(--fonte_curva), sans-serif;
+    font-size: 3rem;
+    background: var(--dourado-branco);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    padding: 20px 0;
+}
+
+.nossoscursos__text {
+    font-size: 1.5rem;
+}
+
 /* CARROSSEL */
 .main__carrossel {
     display: flex;
@@ -168,8 +208,24 @@ header {
     height: auto;
 }
 
+.nossosprofs {
+    background-image: var(--branco-dourado);
+    display: flex;
+}
+
+.conecte {
+    background-image: var(--vinho-laranja);
+}
+
+.msgfinal {
+    background-image: var(--branco-dourado);
+    display: flex;
+}
+
 /* FOOTER */
 footer {
     background-color: var(--vinho);
     color: white;
+    display: flex;
+    align-content: space-around;
 }

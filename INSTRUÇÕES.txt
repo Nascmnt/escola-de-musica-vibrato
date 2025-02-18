@@ -20,4 +20,6 @@ color: transparent;
 
 @import url(/css/styles-principal.css);
 
+- Cria uma subpasta específica para as imagens da sua página dentro da pasta "imagens".
+
 - >SEMPRE< dar git pull antes de começar a mexer nos arquivos, para garantir que não iremos sobreescrever os códigos que outra pessoa fez.
