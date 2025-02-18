@@ -120,9 +120,9 @@ header {
     background-color: var(--marrom);
     color: white;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    gap: 100px;
+    /* gap: 100px; */
 }
 
 .herobanner__content {
@@ -131,20 +131,21 @@ header {
 }
 
 .herobanner__img {
-    height: 30%;
     width: auto;
+    height: 10%;
 }
 
 .herobanner__title {
     font-family: var(--fonte_curva), sans-serif;
     color: var(--dourado);
-    font-size: 3rem;
+    font-size: 3.2rem;
     margin-bottom: 10px;
 }
 
 .herobanner__text {
-    font-size: 1.5rem;
-    margin-bottom: 30px;
+    font-size: 1.7rem;
+    margin: 20px 50px 50px 0;
+    line-height: 35px;
 }
 
 .herobanner__btn {
@@ -152,9 +153,9 @@ header {
     border-radius: 60px;
     text-decoration: none;
     color: var(--marrom);
-    font-size: 1.75rem;
+    font-size: 2.2rem;
+    letter-spacing: 1px;
     background-image: var(--botao_dourado);
-    /* display: inline-block; */
 }
 
 /* SOBRE NÓS */
@@ -162,25 +163,59 @@ header {
     background-image: var(--branco-dourado);
     display: flex;
     margin: 50px 0;
+    justify-content: space-around;
+    /* overflow: visible; */
+}
+
+.about__info {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 50%;
 }
 
 .about__title {
-    font-size: 1.5rem;
+    font-family: var(--fonte_curva);
+    font-size: 3rem;
+    padding: 10px 50px;
+    border-bottom: 3px solid var(--marrom);
     background: var(--laranja-marrom);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
 }
 
-.about__img {
-    width: 40%;
-    height: auto;
+.about__text {
+    font-size: 1.5rem;
+    color: var(--marrom);
+    margin: 30px 10px;
+    line-height: 35px;
 }
+
+.about__btn {
+    background-image: var(--laranja-marrom);
+    padding: 20px;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    border-radius: 60px;
+    color: var(--branco);
+    text-decoration: none;
+}
+
+.about__img {
+    max-width: 40%;
+    height: auto;
+    transform: scale(1.05);
+}
+
 /* NOSSOS CURSOS */
 .nossoscursos__banner {
-    background-image: var(--vinho-marrom), url(/imagens/imgs-index/music-306157_1920\ 1.png);
+    background-image: var(--vinho-marrom);
     text-align: center;
     color: var(--bege);
+    height: 400px;
 }
 
 .nossoscursos__title {
@@ -194,7 +229,11 @@ header {
 }
 
 .nossoscursos__text {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
+}
+
+.nossoscursos__img {
+    width: auto;
 }
 
 /* CARROSSEL */
@@ -227,5 +266,4 @@ footer {
     background-color: var(--vinho);
     color: white;
     display: flex;
-    align-content: space-around;
 }
