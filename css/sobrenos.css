@@ -1,0 +1,22 @@
+@import url(/css/styles-principal.css);
+
+.aboutt{
+    display: flex; /* Usando Flexbox para alinhar os itens lado a lado */
+    max-width: 100%; /* Largura máxima da seção */
+    background-image: var(--branco-dourado);
+    text-align: center;
+}
+.texto1, .imgss{
+    flex:1;
+    padding:10px;
+}
+.imgss{
+    display: flex; /* Para centralizar a imagem dentro do contêiner */
+    justify-content: center; /* Centraliza a imagem horizontalmente */
+    align-items: center;
+}
+.imgsb{
+    width: 62%;
+    height: 100%;
+    justify-content: center;
+}
