@@ -15,14 +15,9 @@
         <nav class="navbar">
             <ul navbar__list>
                 <li class="navbar__item"><a href="index.html">Home</a></li>
-                <li class="navbar__item dropdown">
-                    <a href="#">Quem somos</a>
-                    <ul class="dropdown__menu">
-                        <li><a href="#">A escola</a></li>
-                        <li><a href="#">Nossos cursos</a></li>
-                        <li><a href="#">Professores e horários</a></li>
-                    </ul>
-                </li>
+                <li class="navbar__item"><a href="#">Sobre nós</a></li>
+                <li class="navbar__item"><a href="#">Cursos</a></li>
+                <li class="navbar__item"><a href="#">Nossa equipe</a></li>
                 <li class="navbar__item"><a href="#">Blog</a></li>
                 <li class="navbar__item"><a href="#">Fórum</a></li>
             </ul>
@@ -32,7 +27,7 @@
     <div class="color__container">
         <div class="herobanner">
             <img src="imagens/imgs-index/violino.png" alt="Imagem cortada ao meio de um violino marrom"
-                class="herobanner__img">
+                class="herobanner__img imgredonda">
             <div class="herobanner__content">
                 <h2 class="herobanner__title">A música ao alcance de todos</h2>
                 <p class="herobanner__text">A música é mais que uma arte: é uma ferramenta de mudança. Na Vibrato,
@@ -58,12 +53,12 @@
 
         <section class="nossoscursos">
 
-            <section class="nossoscursos__banner">
+            <div class="nossoscursos__banner">
                 <h2 class="nossoscursos__title">Cursos que conectam e inspiram</h2>
                 <p class="nossoscursos__text">Na Vibrato, a música é mais que uma arte: é uma forma de conectar pessoas.
                     Nossos cursos são projetados para criar um ambiente de aprendizado colaborativo, onde todos se
                     sentem parte de uma comunidade musical. Venha fazer parte dessa jornada!</p>
-            </section>
+            </div>
 
             <section class="main__carrossel"> <!--Substituir fotos, adicionar alt, fazer carrossel-->
                 <a href="#" class="main__carrossel--click"><img src="/imagens/logo.webp" alt=""
@@ -84,7 +79,7 @@
 
         <section class="nossosprofs">
             <img src="/imagens/imgs-index/prof foto.png" alt="Professor ensinando uma menina a tocar Ukulele"
-                class="nossosprofs__img">
+                class="nossosprofs__img imgredonda">
             <div class="nossosprofs__info">
                 <h2 class="nossosprofs__title">Professores que inspiram</h2>
                 <p class="nossosprofs__text">Nossos professores não são apenas educadores – são agentes de
@@ -95,12 +90,16 @@
         </section>
 
         <section class="conecte">
-            <h2 class="conecte__title">Aprenda e Conecte-se</h2>
-            <p class="conecte__text">No nosso blog, você encontra dicas, artigos e tutoriais sobre música e aprendizado
-                musical. Além disso, participe do nosso fórum para trocar ideias, tirar dúvidas e se conectar com outros
-                amantes da música.</p>
+            <div class="conecte__info">
+                <h2 class="conecte__title">Aprenda e Conecte-se</h2>
+                <p class="conecte__text">No nosso blog, você encontra dicas, artigos e tutoriais sobre música e
+                    aprendizado
+                    musical. Além disso, participe do nosso fórum para trocar ideias, tirar dúvidas e se conectar com
+                    outros
+                    amantes da música.</p>
+            </div>
             <div class="conecte__links">
-                <a href="#" class="conect__btn">Visite o blog</a>
+                <a href="#" class="conecte__btn">Visite o blog</a>
                 <a href="#" class="conecte__btn">Participe do fórum</a>
             </div>
         </section>
@@ -124,8 +123,10 @@
         </div>
 
         <div class="footer__right">
-            <p class="footer__logo">Vibrato</p>
-            <p class="footer__logo--subtitulo">A música ao alcance de todos</p>
+            <div class="footer__logo--text">
+                <p class="footer__logo">Vibrato</p>
+                <p class="footer__logo--subtitulo">A música ao alcance de todos</p>
+            </div>
             <div class="contato">
                 <!-- Social Media Icons by NiftyButtons https://niftybuttons.com -->
                 <div style="display: flex; flex-wrap:wrap; align-items: center; justify-content: center;"><a
