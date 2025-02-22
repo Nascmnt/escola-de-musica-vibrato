@@ -60,22 +60,88 @@
                     sentem parte de uma comunidade musical. Venha fazer parte dessa jornada!</p>
             </div>
 
-            <section class="main__carrossel"> <!--Substituir fotos, adicionar alt, fazer carrossel-->
-                <a href="#" class="main__carrossel--click"><img src="/imagens/logo.webp" alt=""
-                        class="main__carrossel--img"></a>
-                <a href="#" class="main__carrossel--click"><img src="/imagens/logo.webp" alt=""
-                        class="main__carrossel--img"></a>
-                <a href="#" class="main__carrossel--click"><img src="/imagens/logo.webp" alt=""
-                        class="main__carrossel--img"></a>
-                <a href="#" class="main__carrossel--click"><img src="/imagens/logo.webp" alt=""
-                        class="main__carrossel--img"></a>
-                <a href="#" class="main__carrossel--click"><img src="/imagens/logo.webp" alt=""
-                        class="main__carrossel--img"></a>
-                <a href="#" class="main__carrossel--click"><img src="/imagens/logo.webp" alt=""
-                        class="main__carrossel--img"></a>
-            </section>
-            <a href="#" class="nossoscursos__btn">Veja todos os nossos cursos</a>
+
+            <div class="carrossel">
+                <div class="carrossel-container">
+
+                    <!-- CARDS DO FINAL REPETIDOS -->
+                    <div class="card">
+                        <span class="carrossel__card--title">Canto</span>
+                        <img src="/imagens/imgs-index/carrossel-canto.jpg" alt="Mulher cantando" class="carrossel__img">
+                    </div>
+                    <div class="card">
+                        <span class="carrossel__card--title">Piano</span>
+                        <img src="/imagens/imgs-index/carrossel-piano.jpg" alt="Pessoa tocando piano"
+                            class="carrossel__img">
+                    </div>
+                    <div class="card">
+                        <span class="carrossel__card--title">Saxofone</span>
+                        <img src="/imagens/imgs-index/carrossel-saxofone.jpg" alt="Homem tocando Saxofone"
+                            class="carrossel__img">
+                    </div>
+
+                    <!-- CARDS ORIGINAIS  -->
+                    <div class="card">
+                        <span class="carrossel__card--title">Violão</span>
+                        <img src="/imagens/imgs-index/carrosel-violao.jpg" alt="Pessoa tocando violão"
+                            class="carrossel__img">
+                    </div>
+
+                    <div class="card">
+                        <span class="carrossel__card--title">Guitarra</span>
+                        <img src="/imagens/imgs-index/carrossel-guitarra.jpg" alt="Pessoa tocando guitarra"
+                            class="carrossel__img">
+                    </div>
+
+                    <div class="card">
+                        <span class="carrossel__card--title">Violino</span>
+                        <img src="/imagens/imgs-index/carrossel-violino.jpg" alt="Pessoa tocando violino"
+                            class="carrossel__img">
+                    </div>
+
+                    <div class="card">
+                        <span class="carrossel__card--title">Canto</span>
+                        <img src="/imagens/imgs-index/carrossel-canto.jpg" alt="Mulher cantando" class="carrossel__img">
+                    </div>
+                    <div class="card">
+                        <span class="carrossel__card--title">Piano</span>
+                        <img src="/imagens/imgs-index/carrossel-piano.jpg" alt="Pessoa tocando piano"
+                            class="carrossel__img">
+                    </div>
+                    <div class="card">
+                        <span class="carrossel__card--title">Saxofone</span>
+                        <img src="/imagens/imgs-index/carrossel-saxofone.jpg" alt="Homem tocando Saxofone"
+                            class="carrossel__img">
+                    </div>
+
+                    <!-- CARDS DO INÍCIO REPETIDOS -->
+                    <div class="card">
+                        <span class="carrossel__card--title">Violão</span>
+                        <img src="/imagens/imgs-index/carrosel-violao.jpg" alt="Pessoa tocando violão"
+                            class="carrossel__img">
+                    </div>
+
+                    <div class="card">
+                        <span class="carrossel__card--title">Guitarra</span>
+                        <img src="/imagens/imgs-index/carrossel-guitarra.jpg" alt="Pessoa tocando guitarra"
+                            class="carrossel__img">
+                    </div>
+
+                    <div class="card">
+                        <span class="carrossel__card--title">Violino</span>
+                        <img src="/imagens/imgs-index/carrossel-violino.jpg" alt="Pessoa tocando violino"
+                            class="carrossel__img">
+                    </div>
+
+                </div>
+                <button class="carrossel-controle prev" onclick="moverCarrossel(-1)">&#10094;</button>
+                <button class="carrossel-controle next" onclick="moverCarrossel(1)">&#10095;</button>
+
+                <a href="#" class="nossoscursos__btn">Veja todos os nossos cursos</a>
+            </div>
         </section>
+
+
 
         <section class="nossosprofs">
             <img src="/imagens/imgs-index/prof foto.png" alt="Professor ensinando uma menina a tocar Ukulele"
@@ -194,7 +260,7 @@
         </div>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="/js/carrossel.js"></script>
 </body>
 
 </html>

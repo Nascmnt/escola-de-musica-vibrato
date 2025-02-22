@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lugrasimo&family=Mate+SC&display=swap');
 
+@import url(/css/carrossel.css);
+
 :root {
     --fonte_curva: 'Lugrasimo';
     --fonte_reta: 'Mate SC';
@@ -92,7 +94,6 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* gap: 100px; */
 }
 
 .herobanner__content {
@@ -180,6 +181,11 @@ header {
 }
 
 /* NOSSOS CURSOS */
+
+.nossoscursos {
+    margin-bottom: 50px;
+}
+
 .nossoscursos__banner {
     background-image: var(--vinho-marrom);
     text-align: center;
@@ -194,40 +200,43 @@ header {
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
+
+    display: inline-block;
+    padding: 40px 30px 10px;
+    border-bottom: 3px solid var(--dourado);
 }
 
 .nossoscursos__text {
     font-size: 1.7rem;
-    margin: 50px 30px;
+    margin: 30px 50px;
+    line-height: 35px;
 }
 
 .nossoscursos__btn {
-    text-align: center;
     text-decoration: none;
-    color: var(--branco);
+    color: var(--marrom);
     background-image: var(--botao_dourado);
-    font-size: 3rem;
+    font-size: 2rem;
     padding: 20px 50px;
     border-radius: 60px;
-}
-
-/* CARROSSEL */
-.main__carrossel {
-    display: flex;
-    overflow-x: scroll;
-}
-
-.main__carrossel--img {
-    width: 300px;
-    height: auto;
+    display: block;
+    max-width: fit-content;
+    margin: auto;
+    margin-bottom: 30px;
 }
 
 /* PROFESSORES */
 .nossosprofs {
     background-image: var(--branco-dourado);
     display: flex;
-    align-content: space-around;
     text-align: center;
+    margin: 70px 0 50px;
+}
+
+.nossosprofs__info {
+    display: flex;
+    flex-direction: column;
+    margin: 0 25px;
 }
 
 .nossosprofs__title {
@@ -238,12 +247,18 @@ header {
     color: transparent;
     font-size: 3rem;
     margin-top: 100px;
+
+    display: inline-block;
+    margin: auto;
+    padding: 50px 30px 20px;
+    border-bottom: 3px solid var(--laranja);
 }
 
 .nossosprofs__text {
     color: var(--marrom);
     font-size: 1.5rem;
     margin: 40px 40px;
+    line-height: 35px;
 }
 
 .nossosprofs__btn {
@@ -252,7 +267,11 @@ header {
     text-decoration: none;
     padding: 20px 50px;
     border-radius: 60px;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+    margin-top: 50px;
+    text-align: center;
+    max-width: fit-content;
+    margin: auto;
 }
 
 .nossosprofs__img {
@@ -260,6 +279,7 @@ header {
         height: auto;
         transform: scale(1.05);
 }
+
 /* Conecte */
 .conecte {
     background-image: var(--vinho-laranja);
@@ -274,13 +294,22 @@ header {
     color: transparent;
     font-family: var(--fonte_curva);
     font-size: 3rem;
-    padding-top: 50px;
+    padding: 30px 40px 10px;
+    border-bottom: 3px solid var(--dourado);
+    display: inline-block;
 }
 
 .conecte__text {
     color: var(--bege);
     font-size: 1.5rem;
-    margin: 30px 50px 50px;
+    margin: 30px 70px;
+    line-height: 35px;
+}
+
+.conecte__links {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 100px;
 }
 
 .conecte__btn {
@@ -296,6 +325,7 @@ header {
     background-image: var(--branco-dourado);
     display: flex;
     align-items: center;
+    margin: 50px 0;
 }
 
 .msgfinal__text {
@@ -303,6 +333,7 @@ header {
     font-size: 1.5rem;
     margin: 0 30px;
     text-align: center;
+    line-height: 35px;
 }
 
 .msgfinal__img {
