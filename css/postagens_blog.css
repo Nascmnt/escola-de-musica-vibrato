@@ -1,0 +1,275 @@
+@import url(/css/styles-principal.css);
+body {
+    background-color: #22080d; /* Cor de fundo global */
+    font-family: lugarisno mate SC;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white; /* Cor do texto global */
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #22080d; /* Cor de fundo do navbar */
+}
+
+.logo img {
+    height: 40px; /* Ajuste a altura conforme necessário */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white; /* Cor do texto do menu */
+    font-size: 16px;
+}
+
+.nav-links a:hover {
+    color: #ffcc00; /* Cor do texto ao passar o mouse */
+}
+
+.menu-icon {
+    display: none; /* Esconder em desktop */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-icon span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+}
+
+/* Responsividade para o menu */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Esconder o menu em mobile */
+        flex-direction: column;
+        width: 100%;
+        background-color: #333;
+    }
+
+    .nav-links.active {
+        display: flex; /* Mostrar o menu quando ativo */
+    }
+
+    .menu-icon {
+        display: flex; /* Mostrar ícone do menu em mobile */
+    }
+}
+
+/* Seção de Introdução (Banner) */
+.intro-banner {
+    position: relative;
+    height: 400px; /* Altura do banner */
+    overflow: hidden; /* Garantir que a imagem não ultrapasse o container */
+}
+
+.banner-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cobrir toda a área */
+}
+
+.banner-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+.banner-content h1 {
+    font-size: 48px;
+    margin: 0;
+}
+
+.banner-content p {
+    font-size: 24px;
+    margin: 10px 0 0;
+}
+
+/* Seção de Publicações */
+.posts-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Layout responsivo */
+    gap: 20px; /* Espaçamento entre os posts */
+    padding: 40px 20px; /* Espaçamento interno */
+}
+
+.post {
+    background-color: #fff; /* Fundo branco */
+    border: 1px solid #ddd; /* Borda sutil */
+    border-radius: 8px; /* Cantos arredondados */
+    overflow: hidden; /* Garantir que a imagem não ultrapasse o container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    display: flex;
+    flex-direction: column;
+}
+
+.post-image {
+    width: 100%;
+    height: 200px; /* Altura fixa para a imagem */
+    object-fit: cover; /* Cobrir toda a área */
+}
+
+.post-content {
+    padding: 20px; /* Espaçamento interno */
+    flex-grow: 1; /* Faz o conteúdo ocupar o espaço restante */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Alinha o conteúdo no topo e o botão no rodapé */
+}
+
+.post-content h2 {
+    font-size: 24px;
+    margin: 0 0 10px;
+    color: #333; /* Cor do título */
+}
+
+.post-content p {
+    font-size: 16px;
+    color: #666; /* Cor do texto */
+    margin: 0 0 15px;
+}
+
+.read-more {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF; /* Cor de fundo do botão */
+    color: white; /* Cor do texto do botão */
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    align-self: flex-start; /* Alinha o botão à esquerda */
+}
+
+.read-more:hover {
+    background-color: #0056b3; /* Cor ao passar o mouse */
+}
+
+/* Responsividade para a seção de publicações */
+@media (max-width: 768px) {
+    .posts-section {
+        grid-template-columns: 1fr; /* Uma coluna em dispositivos móveis */
+    }
+
+    .post {
+        height: auto; /* Altura automática para dispositivos móveis */
+    }
+
+    .post-content h2 {
+        font-size: 20px;
+    }
+
+    .post-content p {
+        font-size: 14px;
+    }
+}
+
+/* Estilos da Paginação */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Espaçamento entre os botões */
+    padding: 20px 0;
+}
+
+.pagination-button {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #007BFF; /* Cor de fundo dos botões */
+    color: white; /* Cor do texto dos botões */
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background-color 0.3s ease; /* Transição suave */
+}
+
+.pagination-button:hover {
+    background-color: #0056b3; /* Cor ao passar o mouse */
+}
+
+.pagination-prev,
+.pagination-next {
+    background-color: transparent; /* Botões "<" e ">" sem fundo */
+    color: #007BFF; /* Cor do texto */
+    font-weight: bold; /* Texto em negrito */
+}
+
+.pagination-prev:hover,
+.pagination-next:hover {
+    background-color: rgba(0, 123, 255, 0.1); /* Fundo semi-transparente ao passar o mouse */
+}
+
+.pagination-ellipsis {
+    font-size: 14px;
+    color: #333; /* Cor do texto da elipsis */
+}
+
+/* Estilos do Footer */
+.footer {
+    background-color: #22080d;
+    width: 1283px; /* Largura do footer */
+    height: 222px; /* Altura do footer */
+    margin: 0 auto; /* Centraliza o footer na página */
+    padding: 40px 20px; /* Espaçamento interno */
+    color: white;
+    text-align: center;
+    box-sizing: border-box; /* Garante que o padding não aumente o tamanho total */
+}
+
+.footer-content {
+    max-width: 100%; /* Ocupa toda a largura do footer */
+    height: 100%; /* Ocupa toda a altura do footer */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza o conteúdo verticalmente */
+    align-items: center; /* Centraliza o conteúdo horizontalmente */
+}
+
+.footer-logo img {
+    height: 60px; /* Ajuste a altura da logo conforme necessário */
+    margin-bottom: 20px; /* Espaçamento abaixo da logo */
+}
+
+.footer-text p {
+    font-size: 16px; /* Tamanho da fonte */
+    margin: 0 0 20px; /* Espaçamento abaixo do texto */
+    color: #ccc; /* Cor do texto mais clara para melhor contraste */
+    line-height: 1.6; /* Melhora a legibilidade */
+}
+
+.footer-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espaçamento entre os ícones */
+}
+
+.footer-icon {
+    width: 32px; /* Tamanho dos ícones */
+    height: 32px;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.footer-icon:hover {
+    opacity: 1;
+}
