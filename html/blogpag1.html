@@ -37,9 +37,9 @@
     <div class="comment-section"> <!-- COPIAR E COLAR ESSA DIV NO FINAL DE CADA PÁG DE POST (ANTES DO FOOTER)-->
         <h3 class="commentsec__title">Comentários</h3>
         <div class="comment-form">
-            <input type="text" id="name" placeholder="Seu nome" required>
-            <input type="email" id="email" placeholder="Seu e-mail" required>
-            <textarea id="comment" placeholder="Seu comentário" required></textarea>
+            <input type="text" id="name" placeholder="Seu nome" required class="comment__form--box">
+            <input type="email" id="email" placeholder="Seu e-mail" required class="comment__form--box">
+            <textarea id="comment" placeholder="Seu comentário" rows="5" required class="comment__form--box"></textarea>
             <button onclick="addComment()">Enviar Comentário</button>
         </div>
         <div class="comment-list" id="comment-list">

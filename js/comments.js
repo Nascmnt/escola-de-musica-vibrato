@@ -8,7 +8,7 @@ async function fetchComments() {
             <div class="name">${comment.name}</div>
             <div class="email">${comment.email}</div>
             <div class="time">${new Date(comment.time).toLocaleString()}</div>
-            <p>${comment.comment}</p>
+            <p class="comment-text">${comment.comment}</p>
             <button class="delete-button" onclick="deleteComment(${comment.id})">Excluir</button>
         </div>
     `).join('');
