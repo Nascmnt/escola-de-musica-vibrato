@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/reset.css">
-    <link rel="stylesheet" href="/css/sobrenos.css">
+    <link rel="stylesheet" href="/css/blogpag.css">
     <title>Vibrato</title>
 </head>
+
 <body>
     <header>
         <h1 class="header__name">Vibrato</h1>
@@ -16,7 +18,7 @@
                 <li class="navbar__item"><a href="sobrenos.html">Sobre nós</a></li>
                 <li class="navbar__item"><a href="cursos.html">Cursos</a></li>
                 <li class="navbar__item"><a href="#">Nossa equipe</a></li>
-                <li class="navbar__item"><a href="blogmarcia.html">Blog</a></li>
+                <li class="navbar__item"><a href="#">Blog</a></li>
                 <li class="navbar__item"><a href="#">Fórum</a></li>
             </ul>
         </nav>
@@ -30,9 +32,22 @@
         <div class="blogdiv2">
             <h3>Tópicos desse Artigo:</h3>
         </div>
-        
     </section>
-    </body>
+
+    <div class="comment-section"> <!-- COPIAR E COLAR ESSA DIV NO FINAL DE CADA PÁG DE POST (ANTES DO FOOTER)-->
+        <h3 class="commentsec__title">Comentários</h3>
+        <div class="comment-form">
+            <input type="text" id="name" placeholder="Seu nome" required>
+            <input type="email" id="email" placeholder="Seu e-mail" required>
+            <textarea id="comment" placeholder="Seu comentário" required></textarea>
+            <button onclick="addComment()">Enviar Comentário</button>
+        </div>
+        <div class="comment-list" id="comment-list">
+            <!-- Comentários serão carregados aqui -->
+        </div>
+    </div>
+
+
     <footer>
         <div class="footer__left">
             <a href="#" class="footer__links">Sobre nós</a>
@@ -112,4 +127,9 @@
             </p>
         </div>
     </footer>
+
+    <script src="/js/comments.js"></script> <!-- COPIAR E COLAR ESSE SCRIPT NO FINAL DE CADA PÁG DE POST -->
+
+</body>
+
 </html>

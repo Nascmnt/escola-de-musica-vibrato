@@ -1,0 +1,6 @@
+@import url(/css/styles-principal.css);
+
+.comment-form {
+    display: flex;
+    flex-direction: column;
+}
