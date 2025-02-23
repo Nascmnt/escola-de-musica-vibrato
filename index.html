@@ -12,8 +12,20 @@
 <body>
     <header>
         <h1 class="header__name">Vibrato</h1>
+        
         <nav class="navbar">
-            <ul navbar__list>
+            <div class="navbar__responsivo">
+            <a href="#" class="home-button">
+                <img src="/imagens/house-svgrepo-com.svg" alt="Botão Home">
+            </a>
+            <button class="hamburger" id="hamburger" aria-label="Abrir menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+
+            <ul class="navbar__list" id="navbarList">
                 <li class="navbar__item"><a href="index.html">Home</a></li>
                 <li class="navbar__item"><a href="/html/sobrenos.html">Sobre nós</a></li>
                 <li class="navbar__item"><a href="/html/cursos.html">Cursos</a></li>
@@ -260,6 +272,7 @@
         </div>
     </footer>
 
+    <script src="/js/menuhamburguer.js"></script>
     <script src="/js/carrossel.js"></script>
 </body>
 
