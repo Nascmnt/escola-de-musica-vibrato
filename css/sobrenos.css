@@ -1,0 +1,181 @@
+@import url(/css/styles-principal.css);
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Inclui bordas e preenchimentos no cálculo de largura e altura */
+}
+
+.aboutt {
+    display: flex; /* Usando Flexbox para alinhar os itens lado a lado */
+    max-width: 100%; /* Largura máxima da seção */
+    height: 100%; 
+    background-image: var(--branco-dourado);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.texto1 {
+    flex: 1; /* O texto ocupa o restante do espaço */
+    display: flex; /* Usar flexbox para centralizar o texto */
+    flex-direction: column; /* Empilha o título e o texto verticalmente */
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+
+}
+
+.imgss {
+    width: 55%; /* A imagem ocupa 57% da largura da seção */
+    position: relative; /* Para posicionar a imagem corretamente */
+    overflow: hidden; /* Para esconder a parte da imagem que sai do contêiner */
+}
+
+.imgsb {
+    width: 100%; /* A imagem ocupa 100% da largura do contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+    object-fit: cover; /* Cobre o contêiner mantendo a proporção */
+    border-top-left-radius: 351px; /* Arredonda o canto superior esquerdo */
+}
+ 
+/*seção 2*/
+
+.fundadora{
+    display: flex; /* Usando Flexbox para alinhar os itens lado a lado */
+    max-width: 100%; /* Largura máxima da seção */
+    height: 100%; 
+    background-image: var(--vinho-laranja);
+    text-align: center;
+    flex: 1; 
+    flex-direction: row-reverse;
+    
+}
+.texto2{
+    flex: 1; /* O texto ocupa o restante do espaço */
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;
+}
+
+.titulofund {
+    font-family: var(--fonte_curva);
+    font-size: 3rem;
+    padding: 10px 50px;
+    border-bottom: 3px solid var(--dourado);
+    background: var(--dourado);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.paragrafo {
+    font-size: 1.5rem;
+    color: var(--branco);
+    margin: 30px 10px;
+    line-height: 35px;
+}
+.img2{
+    width: 50%; /* A imagem ocupa 57% da largura da seção */
+    position: relative; /* Para posicionar a imagem corretamente */
+    overflow: hidden;
+}
+
+.imgg{
+    width: 100%; /* A imagem ocupa 100% da largura do contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+    object-fit: cover; /* Cobre o contêiner mantendo a proporção */
+    border-top-right-radius: 351px;
+}
+/*seção 3*/
+.meio{
+    background-image: var(--vinho-marrom);
+    display: flex; /* Usando Flexbox para alinhar os itens lado a lado */
+    max-width: 100%; /* Largura máxima da seção */
+    height: 30vh; 
+    text-align: center;
+    padding: 20px;
+}
+.texto3{
+    display: flex;
+    flex-direction: column; 
+    justify-content: flex-end; 
+    align-items: flex-end;
+    text-align: right;
+}
+.paragrafo2{
+    font-size: 1.5rem;
+    color: var(--dourado);
+    margin: 10px 0px;
+    line-height: 35px;
+}
+.container {
+    position: relative;
+}
+
+.botoes{
+    min-height:100vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-image: var(--marrom);
+}
+.acord{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    width:80%;
+
+}
+.accordion{
+    background-image: var(--branco-dourado);
+    border-radius: 8px;
+    padding: 12px;
+    cursor: pointer;
+    box-shadow: 5px 5px 5px #22080D;
+}
+.accordion-header{
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.accordion-header span {
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.accordion-body{
+    font-family: var(--fonte_curva);
+    font-size: 3rem;
+    
+    border-bottom: 3px solid var(--marrom);
+    background: var(--laranja-marrom);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    opacity: 0;
+    height: 0;
+    transition: opacity .3s;
+    overflow: hidden;
+}
+
+.accordion-body.active{
+    height:100%;
+    opacity: 1;
+    padding: 10px 50px;
+}
+
+.arrow{
+    transition: transform .2s linear;
+}
+
+.accordion:has(.active) .arrow{
+    transform: rotate(180deg);
+}

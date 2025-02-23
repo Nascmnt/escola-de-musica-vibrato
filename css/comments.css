@@ -1,0 +1,111 @@
+@import url(/css/styles-principal.css);
+
+
+.commentsec__title {
+    font-family: var(--fonte_curva);
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: var(--vinho);
+}
+
+.comment-section {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.comment-form {
+    padding: 40px 60px 40px 40px;
+    background-image: var(--vinho-laranja);
+    border-radius: 50px;
+}
+
+.comment-form textarea {
+    resize: none;
+}
+
+.comment-form input,
+.comment-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 3px solid var(--dourado);
+    border-radius: 5px;
+    color: var(--marrom);
+    background-color: var(--bege);
+    font-family: --fonte_reta;
+    font-size: 1rem;
+}
+
+.comment-form input::placeholder,
+.comment-form textarea::placeholder {
+    color: var(--vinho);
+}
+
+.comment-form button {
+    padding: 10px 20px;
+    background-color: var(--laranja);
+    color: var(--branco);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.comment-form button:hover {
+    background-color: var(--dourado);
+    color: var(--vinho);
+}
+
+.comment-list {
+    margin-top: 20px;
+    background-color: var(--bege);
+}
+
+.comment {
+    border-bottom: 5px solid var(--marrom);
+    padding: 20px;
+    position: relative;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+
+.comment:last-child {
+    border-bottom: none;
+    margin-bottom: 40px;
+}
+
+.comment .name {
+    font-family: var(--fonte_curva);
+    color: var(--vinho);
+}
+
+.comment .email {
+    color: var(--marrom);
+    font-size: 0.9em;
+}
+
+.comment .time {
+    color: var(--marrom);
+    font-size: 0.8em;
+}
+
+.comment-text {
+    color: var(--vinho);
+    font-size: 1.2rem;
+}
+
+.comment .delete-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: var(--dourado);
+    color: var(--marrom);
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.comment .delete-button:hover {
+    background-color: var(--laranja);
+}
