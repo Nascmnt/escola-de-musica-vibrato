@@ -554,4 +554,8 @@ footer {
         font-size: 1.7rem;
     }
 
+    .conecte__btn {
+        padding: 15px 20px;
+        justify-content: space-between;
+    }
 }
