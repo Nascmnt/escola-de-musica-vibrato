@@ -1,0 +1,43 @@
+@import url(/css/styles-principal.css);
+
+.container {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+h2 {
+    color: #333;
+}
+.professores {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.professor-card {
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    width: 250px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+.professor-card:hover {
+    transform: scale(1.05);
+}
+.professor-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.professor-card h3 {
+    color: #555;
+}
+.professor-card p {
+    font-size: 14px;
+    color: #777;
+}
