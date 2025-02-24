@@ -11,18 +11,25 @@
 <body>
     <header>
         <h1 class="header__name">Vibrato</h1>
+        
         <nav class="navbar">
-            <ul navbar__list>
+            <div class="navbar__responsivo">
+            <a href="#" class="home-button">
+                <img src="/imagens/house-svgrepo-com.svg" alt="Botão Home">
+            </a>
+            <button class="hamburger" id="hamburger" aria-label="Abrir menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+
+            <ul class="navbar__list" id="navbarList">
                 <li class="navbar__item"><a href="index.html">Home</a></li>
-                <li class="navbar__item dropdown">
-                    <a href="#">Quem somos</a>
-                    <ul class="dropdown__menu">
-                        <li><a href="#">A escola</a></li>
-                        <li><a href="#">Nossos cursos</a></li>
-                        <li><a href="#">Professores e horários</a></li>
-                    </ul>
-                </li>
-                <li class="navbar__item"><a href="#">Blog</a></li>
+                <li class="navbar__item"><a href="/html/sobrenos.html">Sobre nós</a></li>
+                <li class="navbar__item"><a href="/html/cursos.html">Cursos</a></li>
+                <li class="navbar__item"><a href="#">Nossa equipe</a></li>
+                <li class="navbar__item"><a href="/html/postagens_blog.html">Blog</a></li>
                 <li class="navbar__item"><a href="#">Fórum</a></li>
             </ul>
         </nav>
@@ -172,5 +179,6 @@
     </div>
 </footer>
 
+<script src="/js/menuhamburguer.js"></script>
 </body>
 </html>
