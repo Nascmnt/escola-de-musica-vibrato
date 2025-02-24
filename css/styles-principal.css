@@ -331,6 +331,7 @@ header {
     display: flex;
     justify-content: space-evenly;
     margin: 0 100px;
+    padding-bottom: 30px;
 }
 
 .conecte__btn {
@@ -413,9 +414,40 @@ footer {
     margin: 10px 0;
 }
 
+.footer__copyright--responsivo {
+    display: none;
+}
+
 /* RESPONSIVIDADE */
 
-@media only screen and (max-width: 950px) {
+@media only screen and (min-width: 1600px) {
+
+    .about__text, .nossoscursos__text, .nossosprofs__text, .conecte__text, .msgfinal__text {
+        font-size: 2rem;
+    }
+
+    .about__title, .nossoscursos__title, .nossosprofs__title, .conecte__title {
+        font-size: 3rem;
+    }
+
+    .about__btn, .nossosprofs__btn, .conecte__btn {
+        font-size: 2rem;
+    }
+
+    .herobanner__title {
+        font-size: 3.5rem;
+    }
+
+    .herobanner__text {
+        font-size: 2rem;
+    }
+
+    .navbar__item a {
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
     /* NAVBAR */
     .navbar__responsivo {
         display: flex;
@@ -510,6 +542,11 @@ footer {
 }
 
 @media only screen and (max-width: 800px) {
+    
+    .herobanner, .about, .nossoscursos, .nossosprofs, .conecte, .msgfinal {
+        margin: 30px 0;
+    }
+    
     .herobanner__img {
         display: none;
     }
@@ -532,6 +569,10 @@ footer {
         height: max-content;
     }
 
+    .nossoscursos__title {
+        font-size: 2.4rem;
+    }
+
     .msgfinal__img {
         width: 50%;
         height: auto;
@@ -544,7 +585,7 @@ footer {
     
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 750px) {
     
     .carrossel__card--title {
         font-size: 2rem;
@@ -554,4 +595,240 @@ footer {
         font-size: 1.7rem;
     }
 
+    .nossosprofs__title {
+        font-size: 2.2rem;
+    }
+
+    .conecte__btn {
+        padding: 15px 20px;
+        justify-content: space-between;
+    }
+
+    .conecte__links {
+        gap: 30px;
+    }
+
+    .msgfinal__img {
+        width: 40%;
+        height: auto;
+        margin-top: 70px;
+    }
+
+    .msgfinal__text {
+        margin: 10px 10px 0;
+        font-size: 1.1rem;
+    }
+
+    .footer__left {
+        display: none;
+    }
+
+    .footer__right {
+        align-items: center;
+        margin: auto;
+    }
+
+    .footer__logo {
+        text-align: center;
+    }
+
+    .footer__logo--text {
+        margin: 0;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .nossoscursos__title, .conecte__title {
+        font-size: 2rem;
+    }
+
+    .conecte__btn {
+        font-size: 1.45rem;
+    }
+
+    .msgfinal__img {
+        width: 50%;
+        height: auto;
+        margin-bottom: -2px;
+    }
+
+    .msgfinal__text {
+        font-size: 1.1rem;
+    }
+
+    .footer__copyright {
+        font-size: .85rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    
+    .nossoscursos__title {
+        font-size: 1.7rem;
+    }
+
+    .nossoscursos__text {
+        font-size: 1.4rem;
+    }
+
+    .carrossel__card--title {
+        font-size: 1.9rem;
+    }
+
+    .conecte__btn {
+        font-size: 1.2rem;
+    }
+
+    .msgfinal__img {
+        display: none;
+    }
+
+    .msgfinal__text {
+        padding: 10px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .about__title, .nossoscursos__title, .nossosprofs__title, .conecte__title {
+        border-bottom: none;
+    }
+
+    .about__text {
+        margin: 10px;
+    }
+
+    .nossoscursos__title {
+        font-size: 2.1rem;
+    }
+
+    .nossoscursos__text, .nossosprofs__text {
+        margin: 20px;
+    }
+
+    .carrossel__card--title {
+        font-size: 1.4rem;
+    }
+
+    .nossoscursos__btn {
+        font-size: 1.2rem;
+    }
+
+    .nossosprofs__title {
+        font-size: 2.5rem;
+        padding: 30px 30px 0;
+    }
+
+    .conecte__title {
+        font-size: 2rem;
+    }
+
+    .footer__copyright {
+        font-size: .7rem;
+    }
+
+    .navbar__list {
+        padding: 20px;
+    }
+
+    .navbar__item a{
+        font-size: 1.0rem;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .home-button img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .navbar__responsivo {
+        gap: 20px;
+    }
+    
+    .herobanner__title {
+        font-size: 2.3rem;
+        margin: 0;
+    }
+
+    .herobanner__btn {
+        font-size: 1.2rem;
+        margin: 10px;
+        padding: 10px 30px;
+    }
+
+    .about__img, .nossosprofs__img {
+        width: 70%;
+        height: auto;
+    }
+
+    .about__title {
+        font-size: 2.8rem;
+    }
+
+    .about__text, .nossoscursos__text .nossosprofs__text, .conecte__text, .msgfinal__text {
+        line-height: 25px;
+        margin: 15px;
+    }
+
+    .about__title, .nossoscursos__title, .nossosprofs__title, .conecte__title {
+        font-size: 2.3rem;
+        padding: 0;
+        margin: 20px;
+    }
+
+    .herobanner__text {
+        line-height: 25px;
+        margin: 25px 0;
+    }
+    
+    .about__text {
+        font-size: 1.2rem;
+        margin: 0 0 15px;
+    }
+
+    .about__btn {
+        font-size: 1rem;
+    }
+
+    .nossosprofs__text {
+        line-height: 25px;
+    }
+
+    .nossosprofs__btn {
+        font-size: 1.1rem;
+    }
+
+    .nossosprofs__text {
+        font-size: 1.1rem;
+        margin: 10px 0 15px;
+    }
+
+    .conecte__text {
+        font-size: 1.1rem;
+    }
+
+    .conecte__links {
+        margin: 0 50px;
+    }
+
+    .conecte__btn {
+        font-size: 1rem;
+    }
+
+    .carrossel__card--title {
+        letter-spacing: 1;
+        font-size: 1rem;
+    }
+
+    .nossoscursos__btn {
+        font-size: .9rem;
+    }
+
+    .footer__copyright {
+        display: none;
+    }
+
+    .footer__copyright--responsivo {
+        display: flex;
+    }
 }
