@@ -331,6 +331,7 @@ header {
     display: flex;
     justify-content: space-evenly;
     margin: 0 100px;
+    padding-bottom: 30px;
 }
 
 .conecte__btn {
@@ -419,7 +420,34 @@ footer {
 
 /* RESPONSIVIDADE */
 
-@media only screen and (max-width: 950px) {
+@media only screen and (min-width: 1600px) {
+
+    .about__text, .nossoscursos__text, .nossosprofs__text, .conecte__text, .msgfinal__text {
+        font-size: 2rem;
+    }
+
+    .about__title, .nossoscursos__title, .nossosprofs__title, .conecte__title {
+        font-size: 3rem;
+    }
+
+    .about__btn, .nossosprofs__btn, .conecte__btn {
+        font-size: 2rem;
+    }
+
+    .herobanner__title {
+        font-size: 3.5rem;
+    }
+
+    .herobanner__text {
+        font-size: 2rem;
+    }
+
+    .navbar__item a {
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
     /* NAVBAR */
     .navbar__responsivo {
         display: flex;
