@@ -1,2 +1,86 @@
 @import url(/css/styles-principal.css);
 @import url(/css/comments.css);
+
+header {
+    margin-bottom: 90px;
+}
+
+.postagem__info, .postagem__tags {
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.postagem__info {
+    gap: 8px;
+}
+
+.postagem__info img, .postagem__tags img {
+    width: 4%;
+    height: auto;
+}
+
+.postagem__info span, .postagem__tags a {
+    color: var(--marrom);
+    font-size: .9rem;
+}
+
+.postagem__tags {
+    text-align: center;
+}
+
+.postagem__conteudo {
+    background-color: var(--branco);
+    margin: auto;
+    padding: 60px;
+    width: 700px;
+}
+
+.postagem__img {
+    width: 50%;
+    height: auto;
+    text-align: center;
+    display: block;
+    margin: auto;
+    padding: 20px;
+}
+
+.postagem__titulo {
+    font-family: var(--fonte_curva), sans-serif;
+    color: var(--marrom);
+    font-size: 2rem;
+    margin: 0 0 10px;
+    text-align: center;
+}
+
+.postagem__texto {
+    color: var(--vinho);
+    text-align: justify;
+    font-size: 1.15rem;
+    line-height: 20px;
+}
+
+.postagem__texto p {
+    margin-bottom: 5px;
+}
+
+/* RESPONSIVIDADE */
+
+@media only screen and (max-width: 820px) {
+    .postagem__conteudo {
+        width: 70%;
+        margin: auto;
+    }
+}
+
+@media only screen and (max-width: 570px) {
+    .postagem__titulo {
+        font-size: 1.9rem;
+        line-height: 35px;
+    }
+
+    .postagem__img {
+        width: 80%;
+        height: auto;
+    }
+}

@@ -1,15 +1,21 @@
 @import url(/css/styles-principal.css);
 
 
+.commentsec__container {
+    background-color: var(--bege);
+    padding: 30px 0;
+    margin: 50px 0 0;
+}
+
 .commentsec__title {
     font-family: var(--fonte_curva);
-    font-size: 2rem;
-    margin-bottom: 15px;
-    color: var(--vinho);
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: var(--marrom);
 }
 
 .comment-section {
-    max-width: 600px;
+    width: 700px;
     margin: 0 auto;
 }
 
@@ -31,7 +37,7 @@
     border: 3px solid var(--dourado);
     border-radius: 5px;
     color: var(--marrom);
-    background-color: var(--bege);
+    background-color: var(--branco);
     font-family: --fonte_reta;
     font-size: 1rem;
 }
@@ -57,7 +63,7 @@
 
 .comment-list {
     margin-top: 20px;
-    background-color: var(--bege);
+    background-color: var(--branco);
 }
 
 .comment {
@@ -109,3 +115,12 @@
 .comment .delete-button:hover {
     background-color: var(--laranja);
 }
+
+/* RESPONSIVIDADE */
+
+@media only screen and (max-width: 750px) {
+    .comment-section {
+        width: 70%;
+    }
+}
+
