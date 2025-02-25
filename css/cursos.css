@@ -1,1 +1,62 @@
 @import url(/css/styles-principal.css);
+@import url(/css/sobrenos.css);
+
+.banner__cursos--container {
+    display: flex;
+    justify-content: space-between;
+    background-image: var(--vinho-marrom);
+    overflow: hidden;
+}
+
+.banner__info {
+    text-align: center;
+    margin: auto;
+    padding-right: 90px;
+}
+
+.banner__title {
+    font-family: var(--fonte_curva);
+    font-size: 4rem;
+    color: var(--dourado);
+}
+
+.banner__subtitle {
+    background: var(--dourado-branco);
+-webkit-background-clip: text;
+background-clip: text;
+color: transparent;
+
+font-size: 4rem;
+}
+
+.banner__image--left {
+    width: 40%;
+    height: auto;
+    margin-left: -70px;
+}
+
+.banner__image--right {
+    width: 20%;
+    height: auto;
+}
+
+.banner__cursos--text {
+    background-image: var(--marrom-laranja);
+}
+
+.banner__cursos--p {
+    font-size: 2rem;
+    color: var(--bege);
+    padding: 50px;
+    text-align: center;
+}
+
+.accordion__btn {
+    text-decoration: none;
+    background-image: var(--laranja-marrom);
+    color: var(--branco);
+    padding: 20px 40px;
+    border-radius: 60px;
+    margin-top: 20px;
+    display: inline-block;
+}

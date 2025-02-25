@@ -176,6 +176,11 @@
     line-height: 3rem;
 }
 
+.accordion-body p {
+    color: var(--vinho);
+    text-align: justify;
+}
+
 
 .accordion-body.active{
     max-height: none; 
