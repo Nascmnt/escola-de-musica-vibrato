@@ -71,7 +71,7 @@
 }
 
 .post {
-    background-color: #fff; /* Fundo branco */
+    background-color: #E7D8CF; /* Fundo branco */
     border: 1px solid #ddd; /* Borda sutil */
     border-radius: 8px; /* Cantos arredondados */
     overflow: hidden; /* Garantir que a imagem não ultrapasse o container */
@@ -97,19 +97,19 @@
 .post-content h2 {
     font-size: 24px;
     margin: 0 0 10px;
-    color: #333; /* Cor do título */
+    color: #B5390B; /* Cor do título */
 }
 
 .post-content p {
     font-size: 16px;
-    color: #666; /* Cor do texto */
+    color: #4F1905; /* Cor do texto */
     margin: 0 0 15px;
 }
 
 .read-more {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #007BFF; /* Cor de fundo do botão */
+    background-color: #4F1905; /* Cor de fundo do botão */
     color: white; /* Cor do texto do botão */
     text-decoration: none;
     border-radius: 5px;
@@ -118,7 +118,7 @@
 }
 
 .read-more:hover {
-    background-color: #0056b3; /* Cor ao passar o mouse */
+    background-color: #BFA362; /* Cor ao passar o mouse */
 }
 
 /* Responsividade para a seção de publicações */
@@ -152,8 +152,8 @@
 .pagination-button {
     display: inline-block;
     padding: 10px 15px;
-    background-color: #007BFF; /* Cor de fundo dos botões */
-    color: white; /* Cor do texto dos botões */
+    background-color: #BFA362; /* Cor de fundo dos botões */
+    color: #4F1905; /* Cor do texto dos botões */
     text-decoration: none;
     border-radius: 5px;
     font-size: 14px;
@@ -161,13 +161,13 @@
 }
 
 .pagination-button:hover {
-    background-color: #0056b3; /* Cor ao passar o mouse */
+    background-color: #BFA362; /* Cor ao passar o mouse */
 }
 
 .pagination-prev,
 .pagination-next {
     background-color: transparent; /* Botões "<" e ">" sem fundo */
-    color: #007BFF; /* Cor do texto */
+    color: #BFA362; /* Cor do texto */
     font-weight: bold; /* Texto em negrito */
 }
 
@@ -178,6 +178,6 @@
 
 .pagination-ellipsis {
     font-size: 14px;
-    color: #333; /* Cor do texto da elipsis */
+    color: #BFA362; /* Cor do texto da elipsis */
 }
 
