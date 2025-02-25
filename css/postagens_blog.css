@@ -1,4 +1,16 @@
 @import url(/css/styles-principal.css);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 .menu-icon {
     display: none; /* Esconder em desktop */
     flex-direction: column;
@@ -173,7 +185,7 @@
 
 .pagination-prev:hover,
 .pagination-next:hover {
-    background-color: rgba(0, 123, 255, 0.1); /* Fundo semi-transparente ao passar o mouse */
+    background-color: (0, 123, 255, 0.1); /* Fundo semi-transparente ao passar o mouse */
 }
 
 .pagination-ellipsis {
