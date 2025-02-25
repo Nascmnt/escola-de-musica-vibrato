@@ -180,4 +180,58 @@
     font-size: 14px;
     color: #BFA362; /* Cor do texto da elipsis */
 }
+/* FOOTER */
+footer {
+    background-color: var(--vinho);
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 200px;
+    font-size: 1rem;
+    padding: 0 20px;
+}
 
+.footer__left {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2rem;
+}
+
+.footer__right {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.footer__links {
+    text-decoration: none;
+    color: var(--dourado);
+    margin-bottom: 0.5rem;
+}
+
+.footer__logo {
+    font-family: var(--fonte_curva);
+    font-size: 1.8rem;
+    background: var(--dourado-branco);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-family: var(--fonte_curva);
+    text-align: left;
+}
+
+.footer__logo--text {
+    margin-right: 68px;
+}
+
+.contato {
+    margin: 10px 0;
+}
+
+.footer__copyright--responsivo {
+    display: none;
+}
