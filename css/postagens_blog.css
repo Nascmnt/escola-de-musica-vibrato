@@ -24,23 +24,33 @@ html, body {
     margin: 4px 0;
 }
 
-/* Responsividade para o menu */
+/* Responsividade do Menu */
 @media (max-width: 768px) {
-    .nav-links {
-        display: none; /* Esconder o menu em mobile */
-        flex-direction: column;
-        width: 100%;
-        background-color: #333;
-    }
-
-    .nav-links.active {
-        display: flex; /* Mostrar o menu quando ativo */
-    }
-
     .menu-icon {
-        display: flex; /* Mostrar ícone do menu em mobile */
+        display: flex; 
+    }
+
+    .menu {
+        display: none; /* Esconder o menu em telas menores */
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Ajuste conforme a altura do seu header */
+        left: 0;
+        width: 100%;
+        background-color: var(--vinho); /* Cor de fundo do menu */
+        z-index: 999; /* Garantir que o menu fique acima do banner */
+        padding: 20px 0;
+    }
+
+    .menu.active {
+        display: flex; /* Exibir o menu quando estiver ativo */
+    }
+
+    .menu li {
+        margin: 10px 0;
     }
 }
+
 
 /* Seção de Introdução (Banner) */
 .intro-banner {
@@ -72,6 +82,34 @@ html, body {
 .banner-content p {
     font-size: 24px;
     margin: 10px 0 0;
+}
+/* Responsividade */
+@media (max-width: 768px) {
+    .intro-banner {
+        height: 300px; /* Reduzir a altura do banner para dispositivos menores */
+    }
+
+    .banner-content h1 {
+        font-size: 36px; /* Reduzir o tamanho da fonte do título */
+    }
+
+    .banner-content p {
+        font-size: 18px; /* Reduzir o tamanho da fonte do parágrafo */
+    }
+}
+
+@media (max-width: 480px) {
+    .intro-banner {
+        height: 200px; /* Reduzir ainda mais a altura do banner para telas muito pequenas */
+    }
+
+    .banner-content h1 {
+        font-size: 24px; /* Reduzir o tamanho da fonte do título */
+    }
+
+    .banner-content p {
+        font-size: 14px; /* Reduzir o tamanho da fonte do parágrafo */
+    }
 }
 
 /* Seção de Publicações */
@@ -192,58 +230,54 @@ html, body {
     font-size: 14px;
     color: #BFA362; /* Cor do texto da elipsis */
 }
-/* FOOTER */
-footer {
-    background-color: var(--vinho);
-    color: white;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: 200px;
-    font-size: 1rem;
-    padding: 0 20px;
+/* Responsividade */
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column; /* Altera a direção do flex para empilhar os elementos */
+        align-items: center; /* Centraliza os itens */
+        text-align: center; /* Centraliza o texto */
+        padding: 20px 10px; /* Ajusta o padding */
+    }
+
+    .footer__left {
+        align-items: center; /* Centraliza os itens da esquerda */
+        margin-bottom: 20px; /* Espaçamento entre as seções */
+    }
+
+    .footer__right {
+        align-items: center; /* Centraliza os itens da direita */
+    }
+
+    .footer__logo--text {
+        margin-right: 0; /* Remove a margem direita */
+    }
+
+    .footer__copyright--responsivo {
+        display: block; /* Exibe o copyright responsivo */
+        margin-top: 20px; /* Espaçamento superior */
+        font-size: 0.9rem; /* Tamanho da fonte menor */
+    }
+
+    .footer__copyright--desktop {
+        display: none; /* Oculta o copyright desktop */
+    }
 }
 
-.footer__left {
-    display: flex;
-    flex-direction: column;
-    font-size: 1.2rem;
-}
+@media (max-width: 480px) {
+    .footer__logo {
+        font-size: 1.5rem; /* Reduz o tamanho da logo */
+    }
 
-.footer__right {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: flex-end;
-}
+    .footer__left,
+    .footer__right {
+        font-size: 1rem; /* Reduz o tamanho da fonte */
+    }
 
-.footer__links {
-    text-decoration: none;
-    color: var(--dourado);
-    margin-bottom: 0.5rem;
-}
+    .footer__links {
+        font-size: 0.9rem; /* Reduz o tamanho da fonte dos links */
+    }
 
-.footer__logo {
-    font-family: var(--fonte_curva);
-    font-size: 1.8rem;
-    background: var(--dourado-branco);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    font-family: var(--fonte_curva);
-    text-align: left;
-}
-
-.footer__logo--text {
-    margin-right: 68px;
-}
-
-.contato {
-    margin: 10px 0;
-}
-
-.footer__copyright--responsivo {
-    display: none;
+    .footer__copyright--responsivo {
+        font-size: 0.8rem; /* Reduz o tamanho da fonte do copyright */
+    }
 }
