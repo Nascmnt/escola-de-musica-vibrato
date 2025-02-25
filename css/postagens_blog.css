@@ -165,7 +165,7 @@ html, body {
     display: inline-block;
     padding: 10px 15px;
     background-color: #BFA362; /* Cor de fundo dos botões */
-    color: #4F1905; /* Cor do texto dos botões */
+    color: white; /* Cor do texto dos botões */
     text-decoration: none;
     border-radius: 5px;
     font-size: 14px;
@@ -173,7 +173,7 @@ html, body {
 }
 
 .pagination-button:hover {
-    background-color: #BFA362; /* Cor ao passar o mouse */
+    background-color: #4F1905; /* Cor ao passar o mouse */
 }
 
 .pagination-prev,
