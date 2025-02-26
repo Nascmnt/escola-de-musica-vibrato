@@ -6,9 +6,10 @@
 }
 
 html, body {
-    height: 100%;
     margin: 0;
     padding: 0;
+    width: 100%;
+    overflow-x: hidden; /* Evita barras de rolagem laterais indesejadas */
 }
 
 .menu-icon {
@@ -54,34 +55,27 @@ html, body {
 /* Seção de Introdução (Banner) */
 .intro-banner {
     position: relative;
-    width: 100%;
-    height: 400px; /* Ajuste a altura conforme necessário */
+    height: 400px;
     overflow: hidden;
-}
-
-.intro-banner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-    background-color: #22080D; /* Cor de fundo do banner */
-}
-
-..intro-banner {
-    position: relative;
     width: 100%;
-    height: 400px; /* Ajuste a altura conforme necessário */
-    background-image: url('/imagens/posts-imgs/header.png');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end; /* Alinha o conteúdo à direita */
-    padding: 20px;
-    color: white; /* Cor do texto */
-
 }
-/* Responsividade */
+
+.banner-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.banner-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
 /* Responsividade para dispositivos móveis */
 @media (max-width: 480px) {
     .intro-banner {
