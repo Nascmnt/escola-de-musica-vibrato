@@ -51,64 +51,54 @@ html, body {
     }
 }
 
-
 /* Seção de Introdução (Banner) */
 .intro-banner {
     position: relative;
-    height: 400px; /* Altura do banner */
-    overflow: hidden; /* Garantir que a imagem não ultrapasse o container */
-}
-
-.banner-image {
     width: 100%;
-    height: 100%;
-    object-fit: cover; /* Cobrir toda a área */
+    height: 400px; /* Ajuste a altura conforme necessário */
+    overflow: hidden;
 }
 
-.banner-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: white;
+.intro-banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #22080D; /* Cor de fundo do banner */
 }
 
-.banner-content h1 {
-    font-size: 48px;
-    margin: 0;
-}
+..intro-banner {
+    position: relative;
+    width: 100%;
+    height: 400px; /* Ajuste a altura conforme necessário */
+    background-image: url('/imagens/posts-imgs/header.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Alinha o conteúdo à direita */
+    padding: 20px;
+    color: white; /* Cor do texto */
 
-.banner-content p {
-    font-size: 24px;
-    margin: 10px 0 0;
 }
 /* Responsividade */
-@media (max-width: 768px) {
-    .intro-banner {
-        height: 300px; /* Reduzir a altura do banner para dispositivos menores */
-    }
-
-    .banner-content h1 {
-        font-size: 36px; /* Reduzir o tamanho da fonte do título */
-    }
-
-    .banner-content p {
-        font-size: 18px; /* Reduzir o tamanho da fonte do parágrafo */
-    }
-}
-
+/* Responsividade para dispositivos móveis */
 @media (max-width: 480px) {
     .intro-banner {
-        height: 200px; /* Reduzir ainda mais a altura do banner para telas muito pequenas */
+        height: 200px; /* Altura menor para dispositivos móveis */
+    }
+
+    .banner-content {
+        max-width: 90%; /* Ocupa quase toda a largura */
+        padding: 10px; /* Reduz o padding */
     }
 
     .banner-content h1 {
-        font-size: 24px; /* Reduzir o tamanho da fonte do título */
+        font-size: 2em; /* Reduz o tamanho do título */
     }
 
     .banner-content p {
-        font-size: 14px; /* Reduzir o tamanho da fonte do parágrafo */
+        font-size: 1em; /* Reduz o tamanho do texto */
     }
 }
 
