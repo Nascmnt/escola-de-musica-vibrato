@@ -4,7 +4,7 @@
     max-width: 1000px;
     margin: 20px auto;
     padding: 20px;
-    background: rgb(212, 208, 208);
+    background: rgb(240, 235, 205);
     border-radius: 8px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
@@ -18,7 +18,7 @@ h2 {
     gap: 20px;
 }
 .professor-card {
-    background: #fff;
+    background: #e2d4a6;
     padding: 15px;
     border-radius: 8px;
     width: 250px;
@@ -39,5 +39,5 @@ h2 {
 }
 .professor-card p {
     font-size: 14px;
-    color: #c59811;
+    color: #9e780791;
 }

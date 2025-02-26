@@ -116,6 +116,58 @@
     background-color: var(--laranja);
 }
 
+/* EDIT */
+
+.edit-form {
+    margin-top: 10px;
+    padding: 20px;
+    background-color: var(--bege);
+    border: 2px solid var(--vinho);
+    border-radius: 5px;
+}
+
+.edit-form input, textarea {
+    color: var(--vinho);
+}
+
+.edit-form textarea {
+    resize: none;
+}
+
+.edit-form--box {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 5px;
+    border: 2px solid var(--dourado);
+    border-radius: 3px;
+}
+
+.edit-button {
+    background-color: var(--dourado);
+    color: var(--vinho);
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-top: 8px;
+}
+
+.edit-button:hover {
+    background-color: var(--laranja);
+}
+
+.edit-form button {
+    background-color: var(--dourado);
+    color: var(--marrom);
+    border-radius: 10px;
+    border: none;
+    padding: 8px;
+}
+
+.edit-form button:hover {
+    color: var(--branco);
+}
+
 /* RESPONSIVIDADE */
 
 @media only screen and (max-width: 750px) {
