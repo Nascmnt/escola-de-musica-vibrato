@@ -60,3 +60,35 @@ font-size: 4rem;
     margin-top: 20px;
     display: inline-block;
 }
+
+/* RESPONSIVIDADE */
+
+@media only screen and (max-width: 650px) {
+    .banner__image--left, .banner__image--right {
+        display: none;
+    }
+
+    .banner__info {
+        padding: 30px;
+        margin: auto;
+    }
+
+    .banner__title, .banner__subtitle {
+        font-size: 3.5rem;
+    }
+
+    .banner__cursos--p {
+        font-size: 1.8rem;
+    }
+
+    .accordion__btn {
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 470px) {
+    .accordion__btn {
+        font-size: 1.2rem;
+        padding: 15px 10px;
+    }
+}
