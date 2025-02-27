@@ -1,4 +1,17 @@
 @import url(/css/styles-principal.css);
+* Variáveis de Cores e Fontes */
+:root {
+    --vinho: #22080D;
+    --dourado: #C18A14;
+    --bege: #E7D8CF;
+    --marrom-escuro: #4F1905;
+    --laranja: #B5390B;
+    --bege-claro: #BFA362;
+    --fonte-titulo: 'Mate SC', serif;
+    --fonte-subtitulo: 'Lugrasimo', cursive;
+}
+
+/* Reset Básico */
 * {
     margin: 0;
     padding: 0;
@@ -6,10 +19,10 @@
 }
 
 html, body {
-    margin: 0;
-    padding: 0;
     width: 100%;
     overflow-x: hidden; /* Evita barras de rolagem laterais indesejadas */
+    font-family: var(--fonte-titulo);
+    color: var(--marrom-escuro);
 }
 
 .menu-icon {
@@ -53,109 +66,103 @@ html, body {
 }
 
 /* Seção de Introdução (Banner) */
-/* Estilos para o banner */
 .banner {
     display: flex;
-    align-items: center; /* Alinha verticalmente */
-    justify-content: space-between; /* Espaço entre imagem e texto */
-    width: 100%; /* Ocupa toda a largura da tela */
-    padding: 20px; /* Espaçamento interno */
-    background-color: #22080D; /* Cor de fundo do banner (branco) */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para efeito visual */
-    margin: 0; /* Remove margens padrão */
+    align-items: center;
+    justify-content: right;
+    width: 100%;
+    padding: 20px;
+    background-color: #4F1905;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0;
+   
 }
 
-/* Container da imagem */
 .image-container {
-    flex: 1; /* A imagem ocupa 1 parte do espaço */
-    max-width: 50%; /* Largura máxima da imagem */
+    flex: 1;
+    max-width: 50%;
 }
 
 .image-container img {
     max-width: 100%;
-    height: auto;
-    border-radius: 8px; /* Bordas arredondadas para a imagem */
+    height: right;
+    border-radius: 8px;
 }
 
-/* Container do texto */
 .text-container {
-    flex: 1; /* O texto ocupa 1 parte do espaço */
-    text-align: right; /* Alinha o texto à direita */
-    padding-left: 20px; /* Espaço entre a imagem e o texto */
+    flex: 1;
+    text-align: left;
+    padding-left: 20px;
 }
 
-/* Estilos para o h1 */
 h1 {
-    font-family: 'Mate SC', serif;
+    font-family: Mate Sc;
     font-weight: 400;
     font-size: 96px;
     line-height: 117.12px;
-    letter-spacing: 0%;
-    margin: 4; /* Remove margens padrão */
-    color: #E7D8CF; /* Cor do texto */
-    transform: translateX(-20%); 
+    color: var(--bege);
+    margin: 0;
 }
 
-/* Estilos para o h2 */
 h2 {
-    font-family: 'Lugrasimo', cursive;
+    font-family: Lugrasimo;
     font-weight: 400;
     font-size: 64px;
     line-height: 87.13px;
-    letter-spacing: 0%;
-    margin: 0; /* Remove margens padrão */
-    color: #C18A14; /* Cor do texto */
+    color: var(--dourado);
+    margin: 0;
 }
-/* Responsividade para telas menores (tablets e celulares) */
+
+/* Responsividade para o Banner */
 @media (max-width: 768px) {
     .banner {
-        flex-direction: column; /* Coloca a imagem e o texto em coluna */
-        text-align: center; /* Centraliza o texto */
-        padding: 10px; /* Reduz o padding */
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
     }
 
     .image-container {
-        max-width: 100%; /* A imagem ocupa toda a largura */
-        margin-bottom: 20px; /* Espaço entre a imagem e o texto */
+        max-width: 100%;
+        margin-bottom: 20px;
     }
 
     .text-container {
-        text-align: center; /* Centraliza o texto */
-        padding-left: 0; /* Remove o padding à esquerda */
-        align-items: center; /* Centraliza os itens */
+        text-align: center;
+        padding-left: 0;
     }
 
     h1 {
-        font-size: 64px; /* Reduz o tamanho da fonte */
-        line-height: 80px; /* Ajusta o line-height */
-        transform: translateX(0); /* Remove o deslocamento */
+        font-size: 64px;
+        line-height: 80px;
+        transform: translateX(0);
     }
 
     h2 {
-        font-size: 48px; /* Reduz o tamanho da fonte */
-        line-height: 60px; /* Ajusta o line-height */
+        font-size: 48px;
+        line-height: 60px;
     }
 }
 
-/* Responsividade para telas muito pequenas (celulares pequenos) */
 @media (max-width: 480px) {
     h1 {
-        font-size: 48px; /* Reduz ainda mais o tamanho da fonte */
+        font-size: 48px;
         line-height: 60px;
     }
 
     h2 {
-        font-size: 36px; /* Reduz ainda mais o tamanho da fonte */
+        font-size: 36px;
         line-height: 48px;
     }
 }
 
+/* Seção de Publicações */
 /* Seção de Publicações */
 .posts-section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Layout responsivo */
     gap: 20px; /* Espaçamento entre os posts */
     padding: 40px 20px; /* Espaçamento interno */
+    min-width 1200px
 }
 
 .post {
@@ -180,16 +187,19 @@ h2 {
     display: flex;
     flex-direction: column;
     justify-content: space-between; /* Alinha o conteúdo no topo e o botão no rodapé */
+    
 }
 
 .post-content h2 {
+    --fonte-subtitulo: 'Lugrasimo', cursive;
     font-size: 24px;
-    margin: 0 0 10px;
+    margin: 0 0 5px;
     color: #B5390B; /* Cor do título */
 }
 
 .post-content p {
-    font-size: 16px;
+    --fonte-titulo: 'Mate SC';
+    font-size: 18px;
     color: #4F1905; /* Cor do texto */
     margin: 0 0 15px;
 }
@@ -228,6 +238,7 @@ h2 {
     }
 }
 
+/* Estilos da Paginação */
 /* Estilos da Paginação */
 .pagination {
     display: flex;
@@ -268,14 +279,6 @@ h2 {
     font-size: 14px;
     color: #BFA362; /* Cor do texto da elipsis */
 }
-/* Responsividade */
-@media (max-width: 768px) {
-    footer {
-        flex-direction: column; /* Altera a direção do flex para empilhar os elementos */
-        align-items: center; /* Centraliza os itens */
-        text-align: center; /* Centraliza o texto */
-        padding: 20px 10px; /* Ajusta o padding */
-    }
 
     .footer__left {
         align-items: center; /* Centraliza os itens da esquerda */
@@ -299,7 +302,6 @@ h2 {
     .footer__copyright--desktop {
         display: none; /* Oculta o copyright desktop */
     }
-}
 
 @media (max-width: 480px) {
     .footer__logo {
