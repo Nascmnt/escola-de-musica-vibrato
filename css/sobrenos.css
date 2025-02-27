@@ -1,12 +1,21 @@
 @import url(/css/styles-principal.css);
 
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box; /* Inclui bordas e preenchimentos no cálculo de largura e altura */
 }
+body {
+    margin: 0; /* Remove margens padrão do body */
+    padding: 0; /* Remove padding padrão do body */
+}
 
+.conteiner1, .fundadora, .meio, .botoes {
+    margin: 0 auto; /* Centraliza o contêiner */
+    padding: 0; /* Adiciona padding interno */
+    max-width: 100%; /* Limita a largura máxima */
+}
+/* Seção 1 */
 .conteiner1 {
     display: flex; 
     align-items: stretch;
@@ -14,6 +23,7 @@
     min-width: 1rem;
     background-image: var(--branco-dourado);
     margin-bottom: 30px;
+    flex-wrap: wrap; /* Permite que os itens se movam para a próxima linha em telas menores */
 }
 
 .texto1 {
@@ -27,33 +37,37 @@
 }
 
 .imgss {
+    display: flex;
     flex: 1; 
     padding: 0;
+    justify-content: center; 
+    align-items: center;
 }
 
 .imgsb {
     width: 100%;  
     overflow: hidden;
-    height: 100%; 
+    height: auto; 
     object-fit: cover; 
     border-top-left-radius: 351px;
+    
 }
 
-   
-/*seção 2*/
-
-.fundadora{
+/* Seção 2 */
+.fundadora {
     display: flex;
     min-width: 1rem; 
     background-image: var(--vinho-laranja);
     justify-content: space-between;
     flex-direction: row-reverse;
     align-items: stretch;
+    flex-wrap: wrap; /* Permite que os itens se movam para a próxima linha em telas menores */
 }
-.texto2{
+
+.texto2 {
     display: flex;
     flex: 1; 
-    padding: 20 px;
+    padding: 20px; /* Corrigido para 20px (sem espaço) */
     flex-direction: column; 
     justify-content: center; 
     align-items: center;
@@ -76,104 +90,108 @@
     margin: 30px 10px;
     line-height: 35px;
 }
-.img2{
+
+.img2 {
+    display: flex;
     flex: 1;
     padding: 0;
+    justify-content: center; 
+    align-items: center;
 }
 
-.imgg{
+.imgg {
     width: 100%; /* A imagem ocupa 100% da largura do contêiner */
-    height: 100%;
+    height: auto;
+    max-height: auto; 
     object-fit: cover; /* Cobre o contêiner mantendo a proporção */
     border-top-right-radius: 351px;
     overflow: hidden;
 }
-/*seção 3*/
-.meio{
+
+/* Seção 3 */
+.meio {
     background-image: var(--vinho-marrom);
     display: flex; /* Usando Flexbox para alinhar os itens lado a lado */
     max-width: 100%; 
     padding: 100px;
     justify-content: flex-end;
 }
-.texto3{
+
+.texto3 {
     max-width: 100%;
     text-align: right;
 }
-.paragrafo2{
+
+.paragrafo2 {
     font-size: 2rem;
     color: var(--dourado);
     margin: 5px 0px;
     line-height: 2.5rem;
 }
 
-/* seção 4 */
-
-
-.botoes{
-    min-height:100%;
-    display:flex;
+/* Seção 4 */
+.botoes {
+    min-height: 100%;
+    display: flex;
     align-items: center;
     justify-content: center;
     margin: 2% 0;
 }
-.acord{
+
+.acord {
     display: flex;
     flex-direction: column;
     gap: 50px;
-    width:100%;
+    width: 100%;
 }
-.accordion{
-    background-image: var(--collapsible-div);
-    padding: 5px;
-    cursor: pointer;
-    transition: background-color 0.5s;
-}
-.accordion.active{
+.accordion.active {
     background-color: var(--vinho-marrom);
     border: none;
 }
-.accordion-header{
+
+.accordion-header {
     width: 100%;
     border: none;
     background-color: transparent;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 16px;
+    font-size: 100%;
     cursor: pointer;
     font-family: var(--fonte_curva);
     text-align: center;
     transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out;
-    padding: 0rem 1rem;
+    padding: 2%;
+    background-image: var(--botao_dourado);
 }
+
 .accordion-header.active {
-    
-    color: var(--branco); /* Defina a cor desejada para o título ativo */
+    color: var(--branco); /* Cor do título ativo */
     background-image: var(--vinho-laranja);
-    border: none; /* Defina a cor de fundo do título ativo, se necessário */
 }
 
 .accordion-header span {
-   text-align: center;
-    font-size: 3rem;
+    text-align: center;
+    font-size: 150%;
     color: var(--marrom);
     flex-grow: 1;
 }
+
 .accordion-header.active span {
     color: var(--branco);
 }
 
-.accordion-body{
+.accordion-body {
     font-family: var(--fonte_reta);
-    border-bottom: 1 rem solid var(--vinho);
+    border-bottom: 1rem solid var(--vinho);
     background: var(--dourado);
     opacity: 0;
     max-height: 0; 
     transition: opacity 0.5s ease-in-out, max-height 0.5s ease-in-out;
     overflow: hidden;
-    font-size: 3.5rem;
-    line-height: 3rem;
+    font-size: 100%;
+    margin: 1%;
+   
 }
 
 .accordion-body p {
@@ -181,22 +199,74 @@
     text-align: justify;
 }
 
-
-.accordion-body.active{
+.accordion-body.active {
     max-height: none; 
     opacity: 1;
     padding: 5%;
     background-color: var(--dourado);
-    padding: 5%;
-    font-size: 2rem;
-    line-height: 3rem;
+    font-size: 100%;
+    margin: 0;
+    
 }
 
-.arrow{
+.arrow {
     transition: transform 0.7s ease-in-out;
-    font-size: 2rem;
+    font-size: 100%;
 }
 
-.accordion:has(.active) .arrow{
+.accordion:has(.active) .arrow {
     transform: rotate(180deg);
+}
+
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    .conteiner1, .fundadora {
+        flex-direction: column; /* Muda para coluna em telas menores */
+        align-items: center; /* Centraliza os itens */
+    }
+
+    .texto1, .texto2 {
+        margin: 20px; /* Ajusta a margem */
+        line-height: 30px; /* Ajusta o espaçamento entre linhas */
+    }
+
+    .titulofund {
+        font-size: 2.5rem; /* Reduz o tamanho da fonte */
+        padding: 10px 20px; /* Ajusta o padding */
+    }
+
+    .paragrafo, .paragrafo2 {
+        font-size: 1.5rem; /* Reduz o tamanho da fonte */
+    }
+
+    .meio {
+        padding: 50px; /* Ajusta o padding */
+    }
+
+    .accordion-header {
+        font-size: 1rem; /* Reduz o tamanho da fonte do cabeçalho do acordeão */
+    }
+
+    .accordion-body {
+        font-size: 100%; /* Reduz o tamanho da fonte do corpo do acordeão */
+    }
+}
+
+@media (max-width: 480px) {
+    .titulofund {
+        font-size: 2rem; /* Reduz ainda mais o tamanho da fonte */
+    }
+
+    .paragrafo, .paragrafo2 {
+        font-size: 1.2rem; /* Reduz ainda mais o tamanho da fonte */
+    }
+
+    .accordion-header {
+        font-size: 1rem; /* Reduz o tamanho da fonte do cabeçalho do acordeão */
+    }
+
+    .accordion-body {
+        font-size: 100%; /* Reduz o tamanho da fonte do corpo do acordeão */
+    }
 }
