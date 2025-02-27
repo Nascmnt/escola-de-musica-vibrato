@@ -53,46 +53,100 @@ html, body {
 }
 
 /* Seção de Introdução (Banner) */
-.intro-banner {
-    position: relative;
-    height: 400px;
-    overflow: hidden;
-    width: 100%;
+/* Estilos para o banner */
+.banner {
+    display: flex;
+    align-items: center; /* Alinha verticalmente */
+    justify-content: space-between; /* Espaço entre imagem e texto */
+    width: 100%; /* Ocupa toda a largura da tela */
+    padding: 20px; /* Espaçamento interno */
+    background-color: #22080D; /* Cor de fundo do banner (branco) */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para efeito visual */
+    margin: 0; /* Remove margens padrão */
 }
 
-.banner-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
+/* Container da imagem */
+.image-container {
+    flex: 1; /* A imagem ocupa 1 parte do espaço */
+    max-width: 50%; /* Largura máxima da imagem */
 }
 
-.banner-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: white;
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* Bordas arredondadas para a imagem */
 }
 
-/* Responsividade para dispositivos móveis */
-@media (max-width: 480px) {
-    .intro-banner {
-        height: 200px; /* Altura menor para dispositivos móveis */
-    }
+/* Container do texto */
+.text-container {
+    flex: 1; /* O texto ocupa 1 parte do espaço */
+    text-align: right; /* Alinha o texto à direita */
+    padding-left: 20px; /* Espaço entre a imagem e o texto */
+}
 
-    .banner-content {
-        max-width: 90%; /* Ocupa quase toda a largura */
+/* Estilos para o h1 */
+h1 {
+    font-family: 'Mate SC', serif;
+    font-weight: 400;
+    font-size: 96px;
+    line-height: 117.12px;
+    letter-spacing: 0%;
+    margin: 4; /* Remove margens padrão */
+    color: #E7D8CF; /* Cor do texto */
+    transform: translateX(-20%); 
+}
+
+/* Estilos para o h2 */
+h2 {
+    font-family: 'Lugrasimo', cursive;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 87.13px;
+    letter-spacing: 0%;
+    margin: 0; /* Remove margens padrão */
+    color: #C18A14; /* Cor do texto */
+}
+/* Responsividade para telas menores (tablets e celulares) */
+@media (max-width: 768px) {
+    .banner {
+        flex-direction: column; /* Coloca a imagem e o texto em coluna */
+        text-align: center; /* Centraliza o texto */
         padding: 10px; /* Reduz o padding */
     }
 
-    .banner-content h1 {
-        font-size: 2em; /* Reduz o tamanho do título */
+    .image-container {
+        max-width: 100%; /* A imagem ocupa toda a largura */
+        margin-bottom: 20px; /* Espaço entre a imagem e o texto */
     }
 
-    .banner-content p {
-        font-size: 1em; /* Reduz o tamanho do texto */
+    .text-container {
+        text-align: center; /* Centraliza o texto */
+        padding-left: 0; /* Remove o padding à esquerda */
+        align-items: center; /* Centraliza os itens */
+    }
+
+    h1 {
+        font-size: 64px; /* Reduz o tamanho da fonte */
+        line-height: 80px; /* Ajusta o line-height */
+        transform: translateX(0); /* Remove o deslocamento */
+    }
+
+    h2 {
+        font-size: 48px; /* Reduz o tamanho da fonte */
+        line-height: 60px; /* Ajusta o line-height */
+    }
+}
+
+/* Responsividade para telas muito pequenas (celulares pequenos) */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 48px; /* Reduz ainda mais o tamanho da fonte */
+        line-height: 60px;
+    }
+
+    h2 {
+        font-size: 36px; /* Reduz ainda mais o tamanho da fonte */
+        line-height: 48px;
     }
 }
 
