@@ -1,6 +1,6 @@
 @import url(/css/styles-principal.css);
-* Variáveis de Cores e Fontes */
-:root {
+
+* Variáveis de Cores e Fontes */:root {
     --vinho: #22080D;
     --dourado: #C18A14;
     --bege: #E7D8CF;
@@ -11,147 +11,91 @@
     --fonte-subtitulo: 'Lugrasimo', cursive;
 }
 
-/* Reset Básico */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html, body {
-    width: 100%;
-    overflow-x: hidden; /* Evita barras de rolagem laterais indesejadas */
-    font-family: var(--fonte-titulo);
-    color: var(--marrom-escuro);
-}
-
-.menu-icon {
-    display: none; /* Esconder em desktop */
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.menu-icon span {
-    width: 25px;
-    height: 3px;
-    background-color: white;
-    margin: 4px 0;
-}
-
-/* Responsividade do Menu */
-@media (max-width: 768px) {
-    .menu-icon {
-        display: flex; 
-    }
-
-    .menu {
-        display: none; /* Esconder o menu em telas menores */
-        flex-direction: column;
-        position: absolute;
-        top: 60px; /* Ajuste conforme a altura do seu header */
-        left: 0;
-        width: 100%;
-        background-color: var(--vinho); /* Cor de fundo do menu */
-        z-index: 999; /* Garantir que o menu fique acima do banner */
-        padding: 20px 0;
-    }
-
-    .menu.active {
-        display: flex; /* Exibir o menu quando estiver ativo */
-    }
-
-    .menu li {
-        margin: 10px 0;
-    }
-}
-
 /* Seção de Introdução (Banner) */
 .banner {
     display: flex;
-    align-items: center;
-    justify-content: right;
-    width: 100%;
-    padding: 20px;
-    background-color: #4F1905;
+    /* width: 100%; */
+    justify-content: space-between;
+    background-image: var(--vinho-marrom);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin: 0;
-   
+
 }
 
-.image-container {
-    flex: 1;
-    max-width: 50%;
-}
-
-.image-container img {
-    max-width: 100%;
-    height: right;
-    border-radius: 8px;
+.banner img {
+    width: 35%;
+    height: auto;
 }
 
 .text-container {
-    flex: 1;
-    text-align: left;
-    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 100px;
+    text-align: center;
 }
 
-h1 {
+.banner h1 {
     font-family: Mate Sc;
     font-weight: 400;
-    font-size: 96px;
+    font-size: 5rem;
     line-height: 117.12px;
-    color: var(--bege);
+    color: var(--branco);
     margin: 0;
 }
 
-h2 {
+.banner h2 {
     font-family: Lugrasimo;
     font-weight: 400;
-    font-size: 64px;
+    font-size: 5rem;
     line-height: 87.13px;
-    color: var(--dourado);
+    background: var(--dourado-branco);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
     margin: 0;
 }
 
 /* Responsividade para o Banner */
-@media (max-width: 768px) {
-    .banner {
-        flex-direction: column;
-        text-align: center;
-        padding: 10px;
+
+@media (max-width: 950px) {
+    .banner h1, .banner h2 {
+        font-size: 3.5rem;
     }
 
-    .image-container {
-        max-width: 100%;
-        margin-bottom: 20px;
+    .text-container {
+        margin-left: 30px;
+        padding-bottom: 20px;
     }
+}
+
+@media (max-width: 768px) {
 
     .text-container {
         text-align: center;
         padding-left: 0;
     }
 
-    h1 {
-        font-size: 64px;
-        line-height: 80px;
-        transform: translateX(0);
+    .banner h1, .banner h2 {
+        font-size: 3rem;
+    }
+   
+}
+@media (max-width: 650px) {
+    .banner img {
+        display: none;
     }
 
-    h2 {
-        font-size: 48px;
-        line-height: 60px;
+    .text-container {
+        margin: auto;
     }
 }
 
 @media (max-width: 480px) {
-    h1 {
-        font-size: 48px;
-        line-height: 60px;
-    }
-
-    h2 {
-        font-size: 36px;
-        line-height: 48px;
+    .banner h1, .banner h2 {
+        font-size: 3rem;
+        padding: 10px;
+        margin: 0 auto;
     }
 }
 
@@ -159,74 +103,109 @@ h2 {
 /* Seção de Publicações */
 .posts-section {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Layout responsivo */
-    gap: 20px; /* Espaçamento entre os posts */
-    padding: 40px 20px; /* Espaçamento interno */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* Layout responsivo */
+    gap: 20px;
+    /* Espaçamento entre os posts */
+    padding: 40px 20px;
+    /* Espaçamento interno */
     min-width 1200px
 }
 
 .post {
-    background-color: #E7D8CF; /* Fundo branco */
-    border: 1px solid #ddd; /* Borda sutil */
-    border-radius: 8px; /* Cantos arredondados */
-    overflow: hidden; /* Garantir que a imagem não ultrapasse o container */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    background-color: #E7D8CF;
+    /* Fundo branco */
+    border: 1px solid #ddd;
+    /* Borda sutil */
+    border-radius: 8px;
+    /* Cantos arredondados */
+    overflow: hidden;
+    /* Garantir que a imagem não ultrapasse o container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Sombra leve */
     display: flex;
     flex-direction: column;
 }
 
 .post-image {
     width: 100%;
-    height: 200px; /* Altura fixa para a imagem */
-    object-fit: cover; /* Cobrir toda a área */
+    height: 200px;
+    /* Altura fixa para a imagem */
+    object-fit: cover;
+    /* Cobrir toda a área */
 }
 
 .post-content {
-    padding: 20px; /* Espaçamento interno */
-    flex-grow: 1; /* Faz o conteúdo ocupar o espaço restante */
+    padding: 20px;
+    /* Espaçamento interno */
+    flex-grow: 1;
+    /* Faz o conteúdo ocupar o espaço restante */
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Alinha o conteúdo no topo e o botão no rodapé */
-    
+    justify-content: space-between;
+    /* Alinha o conteúdo no topo e o botão no rodapé */
+
 }
 
 .post-content h2 {
     --fonte-subtitulo: 'Lugrasimo', cursive;
     font-size: 24px;
     margin: 0 0 5px;
-    color: #B5390B; /* Cor do título */
+    color: #B5390B;
+    /* Cor do título */
 }
 
 .post-content p {
     --fonte-titulo: 'Mate SC';
     font-size: 18px;
-    color: #4F1905; /* Cor do texto */
+    color: #4F1905;
+    /* Cor do texto */
     margin: 0 0 15px;
 }
 
 .read-more {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #4F1905; /* Cor de fundo do botão */
-    color: white; /* Cor do texto do botão */
+    background-color: #4F1905;
+    /* Cor de fundo do botão */
+    color: white;
+    /* Cor do texto do botão */
     text-decoration: none;
     border-radius: 5px;
     font-size: 14px;
-    align-self: flex-start; /* Alinha o botão à esquerda */
+    align-self: flex-start;
+    /* Alinha o botão à esquerda */
 }
 
 .read-more:hover {
-    background-color: #BFA362; /* Cor ao passar o mouse */
+    background-color: #BFA362;
+    /* Cor ao passar o mouse */
 }
 
 /* Responsividade para a seção de publicações */
-@media (max-width: 768px) {
+@media (max-width: 950px) {
     .posts-section {
-        grid-template-columns: 1fr; /* Uma coluna em dispositivos móveis */
+        grid-template-columns: 1fr;
+        /* Uma coluna em dispositivos móveis */
     }
 
     .post {
-        height: auto; /* Altura automática para dispositivos móveis */
+        width: 70%;
+        height: auto;
+        /* Altura automática para dispositivos móveis */
+        margin: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .posts-section {
+        grid-template-columns: 1fr;
+        /* Uma coluna em dispositivos móveis */
+    }
+
+    .post {
+        height: auto;
+        /* Altura automática para dispositivos móveis */
     }
 
     .post-content h2 {
@@ -244,80 +223,49 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px; /* Espaçamento entre os botões */
+    gap: 10px;
+    /* Espaçamento entre os botões */
     padding: 20px 0;
 }
 
 .pagination-button {
     display: inline-block;
     padding: 10px 15px;
-    background-color: #BFA362; /* Cor de fundo dos botões */
-    color: white; /* Cor do texto dos botões */
+    background-color: #BFA362;
+    /* Cor de fundo dos botões */
+    color: white;
+    /* Cor do texto dos botões */
     text-decoration: none;
     border-radius: 5px;
     font-size: 14px;
-    transition: background-color 0.3s ease; /* Transição suave */
+    transition: background-color 0.3s ease;
+    /* Transição suave */
 }
 
 .pagination-button:hover {
-    background-color: #4F1905; /* Cor ao passar o mouse */
+    background-color: #4F1905;
+    /* Cor ao passar o mouse */
 }
 
 .pagination-prev,
 .pagination-next {
-    background-color: transparent; /* Botões "<" e ">" sem fundo */
-    color: #BFA362; /* Cor do texto */
-    font-weight: bold; /* Texto em negrito */
+    background-color: transparent;
+    /* Botões "<" e ">" sem fundo */
+    color: #BFA362;
+    /* Cor do texto */
+    font-weight: bold;
+    /* Texto em negrito */
 }
 
 .pagination-prev:hover,
 .pagination-next:hover {
-    background-color: (0, 123, 255, 0.1); /* Fundo semi-transparente ao passar o mouse */
+    background-color: (0, 123, 255, 0.1);
+    /* Fundo semi-transparente ao passar o mouse */
 }
 
 .pagination-ellipsis {
     font-size: 14px;
-    color: #BFA362; /* Cor do texto da elipsis */
+    color: #BFA362;
+    /* Cor do texto da elipsis */
 }
 
-    .footer__left {
-        align-items: center; /* Centraliza os itens da esquerda */
-        margin-bottom: 20px; /* Espaçamento entre as seções */
-    }
-
-    .footer__right {
-        align-items: center; /* Centraliza os itens da direita */
-    }
-
-    .footer__logo--text {
-        margin-right: 0; /* Remove a margem direita */
-    }
-
-    .footer__copyright--responsivo {
-        display: block; /* Exibe o copyright responsivo */
-        margin-top: 20px; /* Espaçamento superior */
-        font-size: 0.9rem; /* Tamanho da fonte menor */
-    }
-
-    .footer__copyright--desktop {
-        display: none; /* Oculta o copyright desktop */
-    }
-
-@media (max-width: 480px) {
-    .footer__logo {
-        font-size: 1.5rem; /* Reduz o tamanho da logo */
-    }
-
-    .footer__left,
-    .footer__right {
-        font-size: 1rem; /* Reduz o tamanho da fonte */
-    }
-
-    .footer__links {
-        font-size: 0.9rem; /* Reduz o tamanho da fonte dos links */
-    }
-
-    .footer__copyright--responsivo {
-        font-size: 0.8rem; /* Reduz o tamanho da fonte do copyright */
-    }
-}
