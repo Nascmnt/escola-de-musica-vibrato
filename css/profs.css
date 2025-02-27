@@ -14,7 +14,6 @@ h2 {
     text-align: center;
 }
 
-/* Centralizar os cards */
 .professores-container {
     display: flex;
     flex-wrap: wrap;
@@ -22,7 +21,6 @@ h2 {
     gap: 20px;
 }
 
-/* Estilizar os cards */
 .professor-card {
     background: #E7D8CF;
     padding: 15px;
@@ -30,14 +28,13 @@ h2 {
     width: 250px;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
     transition: 0.3s;
-    text-align: center; /* Centralizar texto */
+    text-align: center; 
 }
 
 .professor-card:hover {
     transform: scale(1.05);
 }
 
-/* Ajuste da imagem */
 .professor-card img {
     width: 150px;
     height: 150px;
@@ -45,7 +42,6 @@ h2 {
     object-fit: cover;
 }
 
-/* Ajuste dos textos */
 .professor-card h3 {
     color: #C18A14;
     margin-top: 10px;
@@ -53,5 +49,5 @@ h2 {
 
 .professor-card p {
     font-size: 14px;
-    color: #4F1905; /* Cor ajustada para melhorar a legibilidade */
+    color: #4F1905; 
 }
