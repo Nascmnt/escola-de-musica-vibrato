@@ -4,12 +4,12 @@
     max-width: 1000px;
     margin: 20px auto;
     padding: 20px;
-    background: rgb(240, 235, 205);
+    background: #4F1905
     border-radius: 8px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 h2 {
-    color: #333;
+    color: #C18A14;
 }
 .professores {
     display: flex;
@@ -18,7 +18,7 @@ h2 {
     gap: 20px;
 }
 .professor-card {
-    background: #744e29;
+    background: #E7D8CF;    ;
     padding: 15px;
     border-radius: 8px;
     width: 250px;
@@ -35,9 +35,11 @@ h2 {
     object-fit: cover;
 }
 .professor-card h3 {
-    color: #531f1f;
+    color: #C18A14;
 }
 .professor-card p {
-    font-size: 14px;
-    color: #9e780791;
+    font-size: 1px;
+    color: #E7D8CF
+
+    ;
 }
